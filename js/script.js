@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const ctaButton = document.querySelector('.cta-button');
     if (ctaButton) {
         ctaButton.addEventListener('click', function() {
-            alert('欢迎加入AI学习之旅！');
             // 滚动到技术部分
             const techSection = document.querySelector('#technologies');
             if (techSection) {
@@ -51,7 +50,36 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             header.style.boxShadow = 'none';
         }
+        
+        // 根据滚动位置更新活动导航项
+        const sections = document.querySelectorAll('section');
+        const scrollPos = window.scrollY + 100;
+        
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            const bottom = top + section.offsetHeight;
+            const id = section.getAttribute('id');
+            
+            if (scrollPos >= top && scrollPos <= bottom) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
     });
+    
+    // 联系表单提交处理
+    const contactForm = document.querySelector('.contact-form form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('感谢您的留言！我们会尽快回复您。');
+            this.reset();
+        });
+    }
 });
 
 // 页面加载完成后设置第一个导航项为活动状态
