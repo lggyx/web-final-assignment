@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>资源中心 - 大学生通用AI技术分享平台</title>
+    <link rel="stylesheet" href="../css/loader.css">
     <link rel="stylesheet" href="../css/style.css">
     <style>
         .resources-header {
@@ -127,6 +128,16 @@
     </style>
 </head>
 <body>
+    <!-- 加载动画 -->
+    <div class="loading-overlay">
+        <div class="loader-shell">
+            <span class="loader-blob"></span>
+            <span class="loader-blob"></span>
+            <span class="loader-blob"></span>
+            <span class="loader-blob"></span>
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <nav>
@@ -136,6 +147,7 @@
                     <li><a href="showcase.html">技术展示</a></li>
                     <li><a href="community.html">社区</a></li>
                     <li><a href="resources.html">资源</a></li>
+                    <li><a href="effects-showcase.html">特效展示</a></li>
                     <li><a href="../index.html#contact">联系我们</a></li>
                 </ul>
             </nav>
@@ -290,5 +302,13 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script>
+        // 页面加载完成后隐藏加载动画
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.loading-overlay').classList.add('hidden');
+            }, 1000);
+        });
+    </script>
 </body>
 </html>

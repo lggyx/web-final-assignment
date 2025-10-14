@@ -25,3 +25,13 @@ window.addEventListener('scroll', function() {
         header.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
     }
 });
+
+// 页面加载完成后隐藏加载动画
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        const loader = document.querySelector('.loading-overlay');
+        if (loader) {
+            loader.classList.add('hidden');
+        }
+    }, 1000);
+});
