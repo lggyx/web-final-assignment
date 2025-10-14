@@ -1,0 +1,18 @@
+开发主题: 大学生通用AI技术分享平台
+
+全局: 
+    全局背景根据`D:\WorkSpace\Web大作业\resources\2023-10-17_JS是没有上限的 网页上的浩瀚星空`和`D:\WorkSpace\Web大作业\resources\2025-04-13【CSS+JS】贼高级の层层海浪`进行开发
+    预加载根据`D:\WorkSpace\Web大作业\resources\2024-08-23_【CSS】流光加载动画`进行开发，延迟加载为200ms
+    全局点击事件根据`D:\WorkSpace\Web大作业\resources\2021-01-26_No1.HtmlCSSJs制作单机页面弹出文字`
+    所有路由点击事件都确保是有效的
+    每次生成一个功能都要进行git commit
+    `D:\WorkSpace\Web大作业\resources\2024-05-27_CSS高级动效`应用到可以使用的地方
+首页:
+    打开页面第一眼看到的参考`D:\WorkSpace\Web大作业\resources\2021-03-19_[CSS]这是你要的高级感吗-视觉差名片`
+    首页页面参考`D:\WorkSpace\Web大作业\resources\2021-07-11_[Css]这该死的高级感 炫到爆的视差滚动`
+章节:
+    章节页面参考`D:\WorkSpace\Web大作业\resources\2021-04-16_[CSS] 时 间 轴 制 作`
+关于:
+    关于页面参考`D:\WorkSpace\Web大作业\resources\2021-02-12_用CSS制作3D翻页漫画书`和`D:\WorkSpace\Web大作业\resources\2021-03-26_[CSS]这是你要的高级感吗-滑动名片`
+登录注册:
+    登录注册参照`resources/2023-02-05_【CSS+JS】让甲方高攀不起，新拟态滑动登录注册页面（响应式）`
