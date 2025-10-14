@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特效展示 - 大学生通用AI技术分享平台</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .effects-header {
+            text-align: center;
+            padding: 3rem 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+        
+        .effects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+        
+        .effect-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .effect-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .effect-preview {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .effect-1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .effect-2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .effect-3 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .effect-4 {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        .effect-content {
+            padding: 1.5rem;
+        }
+        
+        .effect-content h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .effect-content p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .code-snippet {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">AI Share</div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="showcase.html">技术展示</a></li>
+                    <li><a href="community.html">社区</a></li>
+                    <li><a href="resources.html">资源</a></li>
+                    <li><a href="effects-showcase.html">特效展示</a></li>
+                    <li><a href="../index.html#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="effects-header">
+        <div class="container">
+            <h1>CSS/JS特效展示</h1>
+            <p>展示resources文件夹中的优秀设计样式</p>
+        </div>
+    </section>
+
+    <section class="effects-content">
+        <div class="container">
+            <div class="effects-grid">
+                <div class="effect-card">
+                    <div class="effect-preview effect-1">🌊</div>
+                    <div class="effect-content">
+                        <h3>层层海浪效果</h3>
+                        <p>参考"贼高级の层层海浪"项目，使用SVG和CSS动画创建的动态海浪效果。</p>
+                        <div class="code-snippet">
+                            /* CSS动画关键帧 */<br>
+                            @keyframes wave {<br>
+                            &nbsp;&nbsp;0% { transform: translateX(0); }<br>
+                            &nbsp;&nbsp;100% { transform: translateX(-100%); }<br>
+                            }
+                        </div>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+                
+                <div class="effect-card">
+                    <div class="effect-preview effect-2">⏳</div>
+                    <div class="effect-content">
+                        <h3>时间轴效果</h3>
+                        <p>参考"响应式滚动时间轴"项目，创建的响应式时间轴布局和滚动效果。</p>
+                        <div class="code-snippet">
+                            /* 时间轴样式 */<br>
+                            .timeline:before {<br>
+                            &nbsp;&nbsp;content: "";<br>
+                            &nbsp;&nbsp;background: #ccc;<br>
+                            &nbsp;&nbsp;width: 2px;<br>
+                            }
+                        </div>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+                
+                <div class="effect-card">
+                    <div class="effect-preview effect-3">會員註冊</div>
+                    <div class="effect-content">
+                        <h3>新拟态登录界面</h3>
+                        <p>参考"新拟态滑动登录注册页面"项目，使用CSS3实现的新拟态设计效果。</p>
+                        <div class="code-snippet">
+                            /* 新拟态效果 */<br>
+                            .neumorphism {<br>
+                            &nbsp;&nbsp;box-shadow: 8px 8px 16px #d1d9e6,<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;-8px -8px 16px #f9f9f9;<br>
+                            }
+                        </div>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+                
+                <div class="effect-card">
+                    <div class="effect-preview effect-4">✨</div>
+                    <div class="effect-content">
+                        <h3>流光加载动画</h3>
+                        <p>参考"流光加载动画"项目，创建的炫酷加载动画效果。</p>
+                        <div class="code-snippet">
+                            /* 流光效果 */<br>
+                            @keyframes gradient {<br>
+                            &nbsp;&nbsp;0% { background-position: 0% 50%; }<br>
+                            &nbsp;&nbsp;50% { background-position: 100% 50%; }<br>
+                            &nbsp;&nbsp;100% { background-position: 0% 50%; }<br>
+                            }
+                        </div>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 大学生通用AI技术分享平台. 保留所有权利.</p>
+            <p>联系我们: aishare@university.edu.cn</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

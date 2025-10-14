@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社区 - 大学生通用AI技术分享平台</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .community-header {
+            text-align: center;
+            padding: 3rem 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+        
+        .forum-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+        
+        .forum-posts {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .post {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .post:first-child {
+            padding-top: 0;
+        }
+        
+        .post:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .post-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .post-meta {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .post-excerpt {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+        
+        .sidebar-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .sidebar-section h3 {
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .member-list {
+            list-style: none;
+        }
+        
+        .member-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .member-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .member-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 50%;
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .forum-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">AI Share</div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="showcase.html">技术展示</a></li>
+                    <li><a href="community.html">社区</a></li>
+                    <li><a href="resources.html">资源</a></li>
+                    <li><a href="../index.html#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="community-header">
+        <div class="container">
+            <h1>AI技术社区</h1>
+            <p>与全国大学生交流AI学习心得</p>
+        </div>
+    </section>
+
+    <section class="community-content">
+        <div class="container">
+            <div class="forum-grid">
+                <div class="forum-posts">
+                    <h2>最新讨论</h2>
+                    <div class="post">
+                        <h3 class="post-title">如何入门深度学习？</h3>
+                        <div class="post-meta">张同学 发表于 2025-10-10</div>
+                        <p class="post-excerpt">刚接触深度学习，想知道应该从哪些方面开始学习？有没有推荐的学习路径和资源？</p>
+                        <a href="#" class="btn">查看讨论</a>
+                    </div>
+                    
+                    <div class="post">
+                        <h3 class="post-title">Python在AI项目中的最佳实践</h3>
+                        <div class="post-meta">李同学 发表于 2025-10-08</div>
+                        <p class="post-excerpt">分享一些在实际AI项目中使用Python的经验和技巧，包括代码组织、性能优化等方面。</p>
+                        <a href="#" class="btn">查看讨论</a>
+                    </div>
+                    
+                    <div class="post">
+                        <h3 class="post-title">TensorFlow vs PyTorch，哪个更适合初学者？</h3>
+                        <div class="post-meta">王同学 发表于 2025-10-05</div>
+                        <p class="post-excerpt">比较这两个主流深度学习框架的优缺点，以及在不同场景下的选择建议。</p>
+                        <a href="#" class="btn">查看讨论</a>
+                    </div>
+                    
+                    <div class="post">
+                        <h3 class="post-title">计算机视觉项目实战经验分享</h3>
+                        <div class="post-meta">赵同学 发表于 2025-10-01</div>
+                        <p class="post-excerpt">分享一个完整的图像分类项目从数据准备到模型部署的全过程。</p>
+                        <a href="#" class="btn">查看讨论</a>
+                    </div>
+                </div>
+                
+                <div class="sidebar">
+                    <div class="sidebar-section">
+                        <h3>活跃用户</h3>
+                        <ul class="member-list">
+                            <li>
+                                <div class="member-avatar">张</div>
+                                <div>张同学</div>
+                            </li>
+                            <li>
+                                <div class="member-avatar">李</div>
+                                <div>李同学</div>
+                            </li>
+                            <li>
+                                <div class="member-avatar">王</div>
+                                <div>王同学</div>
+                            </li>
+                            <li>
+                                <div class="member-avatar">赵</div>
+                                <div>赵同学</div>
+                            </li>
+                            <li>
+                                <div class="member-avatar">陈</div>
+                                <div>陈同学</div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3>热门标签</h3>
+                        <div>
+                            <span style="display: inline-block; background: #667eea; color: white; padding: 5px 10px; border-radius: 20px; margin: 5px;">机器学习</span>
+                            <span style="display: inline-block; background: #764ba2; color: white; padding: 5px 10px; border-radius: 20px; margin: 5px;">深度学习</span>
+                            <span style="display: inline-block; background: #4b6cb7; color: white; padding: 5px 10px; border-radius: 20px; margin: 5px;">计算机视觉</span>
+                            <span style="display: inline-block; background: #8e44ad; color: white; padding: 5px 10px; border-radius: 20px; margin: 5px;">NLP</span>
+                            <span style="display: inline-block; background: #3498db; color: white; padding: 5px 10px; border-radius: 20px; margin: 5px;">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 大学生通用AI技术分享平台. 保留所有权利.</p>
+            <p>联系我们: aishare@university.edu.cn</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
