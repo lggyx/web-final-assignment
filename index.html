@@ -3,173 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大学生通用AI技术分享</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>大学生通用AI技术分享平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .features {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .ai-showcase {
+            padding: 5rem 0;
+            background: #f0f2f5;
+        }
+
+        .showcase-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .showcase-text {
+            flex: 1;
+        }
+
+        .showcase-image {
+            flex: 1;
+            height: 400px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .testimonials {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .showcase-content {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>大学生通用AI技术分享平台</h1>
             <nav>
-                <ul>
+                <div class="logo">AI Share</div>
+                <ul class="nav-links">
                     <li><a href="#home">首页</a></li>
-                    <li><a href="#technologies">AI技术</a></li>
-                    <li><a href="#resources">学习资源</a></li>
-                    <li><a href="#cases">实践案例</a></li>
+                    <li><a href="#features">功能</a></li>
+                    <li><a href="#showcase">AI展示</a></li>
+                    <li><a href="#testimonials">用户评价</a></li>
                     <li><a href="#contact">联系我们</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h2>探索人工智能的无限可能</h2>
-                <p>为大学生提供最新、最实用的AI技术分享与学习资源</p>
-                <button class="cta-button">开始学习</button>
-            </div>
-        </section>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>大学生通用AI技术分享平台</h1>
+            <p>探索人工智能的无限可能，与全国大学生共同学习、分享、成长</p>
+            <a href="#features" class="btn">开始探索</a>
+        </div>
+    </section>
 
-        <section id="technologies" class="technologies">
-            <div class="container">
-                <h2>热门AI技术</h2>
-                <div class="tech-grid">
-                    <div class="tech-card">
-                        <h3>
-                            <svg viewBox="0 0 100 100" width="30" height="30">
-                                <circle cx="50" cy="30" r="15" fill="#3498db" />
-                                <circle cx="30" cy="70" r="15" fill="#9b59b6" />
-                                <circle cx="70" cy="70" r="15" fill="#e74c3c" />
-                                <line x1="50" y1="30" x2="30" y2="70" stroke="#2c3e50" stroke-width="3" />
-                                <line x1="50" y1="30" x2="70" y2="70" stroke="#2c3e50" stroke-width="3" />
-                                <line x1="30" y1="70" x2="70" y2="70" stroke="#2c3e50" stroke-width="3" />
-                            </svg>
-                            机器学习
-                        </h3>
-                        <p>机器学习是人工智能的一个分支，通过算法让计算机从数据中学习并做出预测或决策。</p>
-                    </div>
-                    <div class="tech-card">
-                        <h3>
-                            <svg viewBox="0 0 100 100" width="30" height="30">
-                                <rect x="10" y="20" width="80" height="10" fill="#3498db" rx="5" />
-                                <rect x="10" y="40" width="80" height="10" fill="#9b59b6" rx="5" />
-                                <rect x="10" y="60" width="80" height="10" fill="#e74c3c" rx="5" />
-                                <rect x="10" y="80" width="80" height="10" fill="#f39c12" rx="5" />
-                                <circle cx="20" cy="25" r="3" fill="#fff" />
-                                <circle cx="20" cy="45" r="3" fill="#fff" />
-                                <circle cx="20" cy="65" r="3" fill="#fff" />
-                                <circle cx="20" cy="85" r="3" fill="#fff" />
-                            </svg>
-                            深度学习
-                        </h3>
-                        <p>深度学习是机器学习的一个子集，使用多层神经网络模拟人脑处理信息的方式。</p>
-                    </div>
-                    <div class="tech-card">
-                        <h3>
-                            <svg viewBox="0 0 100 100" width="30" height="30">
-                                <path d="M20,30 Q50,10 80,30" stroke="#3498db" stroke-width="3" fill="none" />
-                                <path d="M20,50 Q50,30 80,50" stroke="#9b59b6" stroke-width="3" fill="none" />
-                                <path d="M20,70 Q50,50 80,70" stroke="#e74c3c" stroke-width="3" fill="none" />
-                                <circle cx="30" cy="30" r="5" fill="#3498db" />
-                                <circle cx="50" cy="30" r="5" fill="#3498db" />
-                                <circle cx="70" cy="30" r="5" fill="#3498db" />
-                                <circle cx="30" cy="50" r="5" fill="#9b59b6" />
-                                <circle cx="50" cy="50" r="5" fill="#9b59b6" />
-                                <circle cx="70" cy="50" r="5" fill="#9b59b6" />
-                                <circle cx="30" cy="70" r="5" fill="#e74c3c" />
-                                <circle cx="50" cy="70" r="5" fill="#e74c3c" />
-                                <circle cx="70" cy="70" r="5" fill="#e74c3c" />
-                            </svg>
-                            自然语言处理
-                        </h3>
-                        <p>自然语言处理使计算机能够理解、解释、生成和与人类语言互动。</p>
-                    </div>
-                    <div class="tech-card">
-                        <h3>
-                            <svg viewBox="0 0 100 100" width="30" height="30">
-                                <rect x="15" y="20" width="70" height="50" fill="none" stroke="#3498db" stroke-width="3" rx="5" />
-                                <circle cx="40" cy="40" r="5" fill="#9b59b6" />
-                                <circle cx="60" cy="40" r="5" fill="#9b59b6" />
-                                <path d="M35,55 Q50,65 65,55" stroke="#e74c3c" stroke-width="3" fill="none" />
-                                <rect x="25" y="30" width="50" height="30" fill="none" stroke="#2c3e50" stroke-width="1" rx="2" />
-                            </svg>
-                            计算机视觉
-                        </h3>
-                        <p>计算机视觉致力于让计算机能够"看"并理解图像和视频中的内容。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="resources" class="resources">
-            <div class="container">
-                <h2>学习资源推荐</h2>
-                <div class="resource-list">
-                    <div class="resource-item">
-                        <h3>在线课程</h3>
-                        <p>推荐优质的AI学习在线课程平台</p>
-                    </div>
-                    <div class="resource-item">
-                        <h3>开源项目</h3>
-                        <p>值得学习和参与的AI开源项目</p>
-                    </div>
-                    <div class="resource-item">
-                        <h3>技术博客</h3>
-                        <p>前沿AI技术博客和文章推荐</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="cases" class="cases">
-            <div class="container">
-                <h2>实践案例</h2>
-                <div class="case-studies">
-                    <div class="case-item">
-                        <h3>图像识别项目</h3>
-                        <p>使用卷积神经网络实现图像分类识别</p>
-                    </div>
-                    <div class="case-item">
-                        <h3>聊天机器人</h3>
-                        <p>基于自然语言处理技术的智能对话系统</p>
-                    </div>
-                    <div class="case-item">
-                        <h3>推荐系统</h3>
-                        <p>利用机器学习算法为用户推荐内容</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>联系我们</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3>加入我们</h3>
-                        <p>如果您对AI技术感兴趣，欢迎加入我们的学习社区</p>
-                    </div>
-                    <div class="contact-form">
-                        <form>
-                            <input type="text" placeholder="您的姓名" required>
-                            <input type="email" placeholder="您的邮箱" required>
-                            <textarea placeholder="留言内容" required></textarea>
-                            <button type="submit">发送消息</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <section class="features" id="features">
         <div class="container">
-            <p>&copy; 2025 大学生通用AI技术分享平台. All rights reserved.</p>
+            <h2 class="section-title">平台特色</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI技术分享</h3>
+                    <p>汇聚各类AI技术文章、教程和项目案例，涵盖机器学习、深度学习、自然语言处理等领域。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>大学生社区</h3>
+                    <p>专为大学生打造的AI学习社区，与同龄人交流技术心得，共同进步。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>在线实践</h3>
+                    <p>提供在线编程环境，无需配置即可实践各种AI算法和模型。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ai-showcase" id="showcase">
+        <div class="container">
+            <div class="showcase-content">
+                <div class="showcase-text">
+                    <h2 class="section-title">AI技术展示</h2>
+                    <p>平台展示了各种前沿的AI技术和应用，包括计算机视觉、自然语言处理、语音识别等。通过实际案例和演示，帮助大学生更好地理解和掌握AI技术。</p>
+                    <p>我们定期更新最新的AI研究成果和技术动态，让您始终站在技术前沿。</p>
+                    <a href="#" class="btn">查看更多案例</a>
+                </div>
+                <div class="showcase-image">
+                    AI技术演示区域
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">用户评价</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"这个平台让我对AI技术有了更深入的了解，丰富的学习资源和实践机会帮助我快速提升了技能。"</p>
+                    <p class="testimonial-author">- 张同学，计算机专业</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"社区氛围很好，可以和全国各地的同学交流AI学习心得，解决了很多我在学习中遇到的问题。"</p>
+                    <p class="testimonial-author">- 李同学，人工智能专业</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"在线实践环境非常方便，不需要自己配置复杂的开发环境就能直接上手实践各种AI算法。"</p>
+                    <p class="testimonial-author">- 王同学，数据科学专业</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2025 大学生通用AI技术分享平台. 保留所有权利.</p>
+            <p>联系我们: aishare@university.edu.cn</p>
         </div>
     </footer>
-
-    <script src="js/script.js"></script>
-    <script src="js/background.js"></script>
 </body>
 </html>
