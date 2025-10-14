@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>技术展示 - 大学生通用AI技术分享平台</title>
     <link rel="stylesheet" href="../css/loader.css">
+    <link rel="stylesheet" href="../css/background.css">
     <link rel="stylesheet" href="../css/style.css">
     <style>
         .showcase-header {
@@ -160,13 +161,14 @@
         </div>
     </footer>
 
+    <script src="../js/background.js"></script>
     <script src="../js/main.js"></script>
     <script>
         // 页面加载完成后隐藏加载动画
         window.addEventListener('load', function() {
             setTimeout(function() {
                 document.querySelector('.loading-overlay').classList.add('hidden');
-            }, 1000);
+            }, 200);
         });
     </script>
 </body>
