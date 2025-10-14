@@ -32,13 +32,15 @@
     height: 100%;
     top: 0;
     left: 0;
-    transform-origin: left center;
+    transform-origin: left;
     transform-style: preserve-3d;
     transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+    /* 设置层级 */
+    z-index: calc(var(--index) * 10);
 }
 
 .page::after {
@@ -145,10 +147,14 @@
 /* 翻页效果 */
 .flipped {
     transform: rotateY(-180deg);
+    /* 翻页后调整层级 */
+    z-index: calc(var(--index) * -10) !important;
+    transition-delay: calc(var(--index) * 0.1s);
 }
 
 .page.flipped ~ .page {
     transform: rotateY(-160deg);
+    transition-delay: calc(var(--index) * 0.05s);
 }
 
 .page.flipped ~ .page.flipped ~ .page {

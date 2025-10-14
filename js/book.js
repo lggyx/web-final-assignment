@@ -8,19 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentPage = 0;
     const totalPages = pages.length;
     
-    // 初始化页面z-index
+    // 初始化页面
     function initPages() {
         pages.forEach((page, index) => {
-            page.style.zIndex = totalPages - index;
             // 为每页添加点击事件
-            if (index < totalPages - 1) { // 不为最后一页添加点击事件
-                page.addEventListener('click', function(e) {
-                    // 只有点击右侧一半才触发翻页
-                    if (e.offsetX > this.offsetWidth / 2) {
-                        nextPage();
-                    }
-                });
-            }
+            page.addEventListener('click', function(e) {
+                // 只有点击右侧一半才触发翻页
+                if (e.offsetX > this.offsetWidth / 2 && index === currentPage) {
+                    nextPage();
+                }
+            });
         });
     }
     
