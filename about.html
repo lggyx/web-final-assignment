@@ -3,70 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于 - 大学生通用AI技术分享平台</title>
+    <title>关于我们 - AI技术分享平台</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/book.css">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="index.html">主页</a></li>
-            <li><a href="chapters.html">章节</a></li>
-            <li><a href="about.html">关于</a></li>
-            <li><a href="login.html">登录/注册</a></li>
-        </ul>
-    </nav>
-
-    <div class="main-content">
-        <!-- 3D翻页漫画书 -->
-        <section class="flipbook-section">
-            <div class="flipbook-container">
-                <div class="flipbook-page" style="--i:2;--s:1;background-color: #6a5acd;">
-                    平台介绍<br>
-                    了解我们的AI技术分享平台的使命和愿景
+    <!-- 星空背景画布 -->
+    <canvas id="starCanvas"></canvas>
+    
+    <!-- 页面主要内容 -->
+    <div class="container">
+        <header>
+            <h1>大学生通用AI技术分享平台</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="chapters.html">章节内容</a></li>
+                    <li><a href="about.html" class="active">关于我们</a></li>
+                    <li><a href="login.html">登录/注册</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="book-section">
+                <h2>平台介绍</h2>
+                
+                <div class="book-container">
+                    <div class="book">
+                        <div class="page front-cover">
+                            <div class="page-content">
+                                <h3>AI技术分享平台</h3>
+                                <p>大学生通用AI技术学习平台</p>
+                                <div class="cover-logo">AI</div>
+                            </div>
+                        </div>
+                        
+                        <div class="page back-cover">
+                            <div class="page-content">
+                                <h3>联系我们</h3>
+                                <p>感谢您的关注！</p>
+                                <ul>
+                                    <li>Email: ai@example.com</li>
+                                    <li>QQ群: 123456789</li>
+                                    <li>微信公众号: AI技术分享</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="page inner-page-1">
+                            <div class="page-content">
+                                <h3>平台使命</h3>
+                                <p>我们的使命是为大学生提供一个优质的AI技术学习和分享平台，帮助大家更好地理解和掌握人工智能技术。</p>
+                                <p>通过系统性的课程内容和实践项目，我们希望培养更多AI领域的优秀人才。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="page inner-page-2">
+                            <div class="page-content">
+                                <h3>平台特色</h3>
+                                <ul>
+                                    <li>系统性课程体系</li>
+                                    <li>丰富的实战项目</li>
+                                    <li>活跃的学习社区</li>
+                                    <li>专业的导师团队</li>
+                                    <li>最新的技术资讯</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="page inner-page-3">
+                            <div class="page-content">
+                                <h3>加入我们</h3>
+                                <p>无论你是AI初学者还是有一定基础的学习者，都欢迎加入我们的平台！</p>
+                                <p>在这里你可以：</p>
+                                <ul>
+                                    <li>学习前沿AI技术</li>
+                                    <li>参与实际项目开发</li>
+                                    <li>与同行交流经验</li>
+                                    <li>展示自己的作品</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flipbook-page flip" style="--i:4;--s:1;background-color: #7b68ee;">
-                    学习资源<br>
-                    丰富的AI学习资料和实战项目
+                
+                <div class="book-controls">
+                    <button id="prevPage" class="book-btn">上一页</button>
+                    <button id="nextPage" class="book-btn">下一页</button>
                 </div>
-                <div class="flipbook-page flip" style="--i:3;--s:2;background-color: #8a2be2;">
-                    社区交流<br>
-                    与同行交流经验，共同进步
-                </div>
-                <div class="flipbook-page flip" style="--i:2;--s:3;background-color: #9370db;">
-                    技术分享<br>
-                    定期举办技术分享会和讲座
-                </div>
-                <div class="flipbook-page flip" style="--i:1;--s:4;background-color: #ba55d3;">
-                    联系我们<br>
-                    获取更多资讯和合作机会
-                </div>
-            </div>
-        </section>
-
-        <!-- 滑动名片 -->
-        <section class="business-card-section">
-            <div class="business-card-container">
-                <div class="business-card-content">
-                    <a href="#">AI技术分享平台</a>
-                    <h2>联系微信：AI_Tech_Share</h2>
-                    <span>我们是一个专注于AI技术分享的平台，<br/>致力于为大学生提供优质的AI学习资源，<br/>帮助大家掌握前沿技术，<br/>在AI时代中脱颖而出！</span>
-                </div>
-                <div class="cylinder-container">
-                    <div class="cylinder" style="--i:1;--w:1.5"></div>
-                    <div class="cylinder" style="--i:2;--w:1.6"></div>
-                    <div class="cylinder" style="--i:3;--w:1.4"></div>
-                    <div class="cylinder" style="--i:4;--w:1.7"></div>
-                    <div class="cylinder" style="--i:1"></div>
-                </div>
-                <div class="qr-code"></div>
-            </div>
-        </section>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 大学生通用AI技术分享平台. All rights reserved.</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>&copy; 2025 大学生通用AI技术分享平台. All rights reserved.</p>
-    </footer>
+    
+    <script src="js/starfield.js"></script>
+    <script src="js/book.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
