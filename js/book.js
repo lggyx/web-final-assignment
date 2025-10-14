@@ -12,6 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function initPages() {
         pages.forEach((page, index) => {
             page.style.zIndex = totalPages - index;
+            // 为每页添加点击事件
+            if (index < totalPages - 1) { // 不为最后一页添加点击事件
+                page.addEventListener('click', function(e) {
+                    // 只有点击右侧一半才触发翻页
+                    if (e.offsetX > this.offsetWidth / 2) {
+                        nextPage();
+                    }
+                });
+            }
         });
     }
     
@@ -21,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const page = pages[currentPage];
             page.classList.add('flipped');
             currentPage++;
+            updateButtonStates();
         }
     }
     
@@ -30,26 +40,38 @@ document.addEventListener('DOMContentLoaded', function() {
             currentPage--;
             const page = pages[currentPage];
             page.classList.remove('flipped');
+            updateButtonStates();
+        }
+    }
+    
+    // 更新按钮状态
+    function updateButtonStates() {
+        if (prevButton) {
+            prevButton.disabled = (currentPage === 0);
+        }
+        if (nextButton) {
+            nextButton.disabled = (currentPage === totalPages - 1);
         }
     }
     
     // 绑定按钮事件
     if (nextButton) {
-        nextButton.addEventListener('click', nextPage);
+        nextButton.addEventListener('click', function(e) {
+            e.stopPropagation();
+            nextPage();
+        });
     }
     
     if (prevButton) {
-        prevButton.addEventListener('click', prevPage);
-    }
-    
-    // 封面点击翻页
-    const frontCover = document.querySelector('.front-cover');
-    if (frontCover) {
-        frontCover.addEventListener('click', nextPage);
+        prevButton.addEventListener('click', function(e) {
+            e.stopPropagation();
+            prevPage();
+        });
     }
     
     // 初始化
     initPages();
+    updateButtonStates();
     
     // 键盘事件支持
     document.addEventListener('keydown', function(e) {
