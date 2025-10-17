@@ -1,5 +1,5 @@
-/>>> 基础样式重置 <<<，</strong>
- <strong>* {
+/* 基础样式重置 */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,7 +16,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/>>> 头部导航样式 <<<，</strong>
+/* 头部导航样式 */
 header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -66,7 +66,7 @@ nav {
     transform: translateY(-2px);
 }
 
-/>>> 主要内容区域 <<<，</strong>
+/* 主要内容区域 */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -74,7 +74,7 @@ main {
     min-height: calc(100vh - 200px);
 }
 
-/>>> 页面头部样式 <<<，</strong>
+/* 页面头部样式 */
 .page-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -96,7 +96,7 @@ main {
     opacity: 0.9;
 }
 
-/>>> 内容区块样式 <<<，</strong>
+/* 内容区块样式 */
 .content-section {
     margin-bottom: 3rem;
 }
@@ -136,7 +136,7 @@ main {
     border-left: 4px solid #ff6b6b;
 }
 
-/>>> 主页英雄区域 <<<，</strong>
+/* 主页英雄区域 */
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -197,7 +197,7 @@ main {
     50% { transform: translateY(-20px); }
 }
 
-/>>> 特性网格 <<<，</strong>
+/* 特性网格 */
 .features {
     text-align: center;
     margin-bottom: 4rem;
@@ -240,7 +240,7 @@ main {
     margin-bottom: 1rem;
 }
 
-/>>> 学习路径 <<<，</strong>
+/* 学习路径 */
 .learning-path {
     text-align: center;
     margin-bottom: 4rem;
@@ -289,7 +289,7 @@ main {
     font-weight: bold;
 }
 
-/>>> 时间线样式 <<<，</strong>
+/* 时间线样式 */
 .timeline {
     position: relative;
     padding-left: 2rem;
@@ -335,7 +335,7 @@ main {
     margin-bottom: 0.5rem;
 }
 
-/>>> 网格布局 <<<，</strong>
+/* 网格布局 */
 .branch-grid,
 .ml-types-grid,
 .algorithms-grid,
@@ -386,7 +386,7 @@ main {
     text-align: center;
 }
 
-/>>> 算法列表 <<<，</strong>
+/* 算法列表 */
 .algorithm-item {
     background: #f8f9fa;
     padding: 1rem;
@@ -399,7 +399,7 @@ main {
     color: #667eea;
 }
 
-/>>> 工作流程 <<<，</strong>
+/* 工作流程 */
 .workflow-steps {
     display: flex;
     justify-content: space-between;
@@ -418,7 +418,7 @@ main {
     min-width: 150px;
 }
 
-/>>> 学习路径卡片 <<<，</strong>
+/* 学习路径卡片 */
 .learning-paths {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -462,7 +462,7 @@ main {
     border-left: 4px solid #667eea;
 }
 
-/>>> 导航链接 <<<，</strong>
+/* 导航链接 */
 .navigation-links {
     display: flex;
     justify-content: space-between;
@@ -494,7 +494,7 @@ main {
     transform: translateX(5px);
 }
 
-/>>> 页脚样式 <<<，</strong>
+/* 页脚样式 */
 footer {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -508,7 +508,7 @@ footer {
     opacity: 0.9;
 }
 
-/>>> 响应式设计 <<<，</strong>
+/* 响应式设计 */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -586,9 +586,22 @@ footer {
     .concept-card {
         padding: 1.5rem;
     }
+
+    .tip-card {
+        padding: 1.5rem;
+    }
+
+    .tip-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .tip-card h4 {
+        font-size: 1.2rem;
+    }
 }
 
-/>>> 动画效果 <<<，</strong>
+/* 动画效果 */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -603,11 +616,12 @@ footer {
 .concept-card,
 .feature-card,
 .path-card,
-.timeline-item {
+.timeline-item,
+.tip-card {
     animation: fadeInUp 0.6s ease-out;
 }
 
-/>>> 特殊样式 <<<，</strong>
+/* 特殊样式 */
 .neuron-formula {
     background: #2c3e50;
     color: #ecf0f1;
@@ -642,4 +656,50 @@ footer {
     color: #f39c12;
     font-weight: bold;
     margin-top: 0.5rem;
+}
+
+/* 学习建议卡片增强样式 */
+.tip-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.tip-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    display: block;
+}
+
+.tip-card h4 {
+    color: #667eea;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.tip-card p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* 学习建议部分标题样式 */
+.concept-card h3 {
+    color: #667eea;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #667eea;
+    padding-left: 1rem;
+    font-weight: bold;
 }
