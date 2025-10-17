@@ -179,3 +179,50 @@ function throttle(func, limit) {
 }
 
 console.log('JavaScript交互功能模块加载完成');
+
+/**
+ * 初始化移动端菜单功能
+ * 实现汉堡菜单的显示/隐藏功能
+ */
+function initMobileMenu() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (!menuToggle || !navLinks) return;
+    
+    // 汉堡菜单点击事件
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        
+        // 切换汉堡菜单图标
+        if (navLinks.classList.contains('active')) {
+            this.innerHTML = '✕';
+        } else {
+            this.innerHTML = '☰';
+        }
+    });
+    
+    // 点击导航链接后关闭菜单（移动端）
+    const navLinksItems = navLinks.querySelectorAll('a');
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                navLinks.classList.remove('active');
+                menuToggle.innerHTML = '☰';
+            }
+        });
+    });
+    
+    // 窗口大小改变时重置菜单状态
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            navLinks.classList.remove('active');
+            menuToggle.innerHTML = '☰';
+        }
+    });
+}
+
+// 在DOM加载完成后初始化移动端菜单
+document.addEventListener('DOMContentLoaded', function() {
+    initMobileMenu();
+});

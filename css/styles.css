@@ -831,3 +831,189 @@ header.scrolled {
     font-size: 16px;
   }
 }
+
+/* ==================== 响应式设计优化 ==================== */
+/* 移动设备优化：针对小屏幕设备的样式调整 */
+
+/* 平板设备：屏幕宽度小于1024px */
+@media (max-width: 1024px) {
+  /* 调整主内容区域最大宽度 */
+  main {
+    max-width: 90%;
+    padding: 0 20px;
+  }
+  
+  /* 导航栏调整为垂直布局 */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* 导航链接垂直排列 */
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* 特性网格调整为2列 */
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  /* 学习路径调整为垂直排列 */
+  .path-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .path-arrow {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+}
+
+/* 手机设备：屏幕宽度小于768px */
+@media (max-width: 768px) {
+  /* 进一步缩小主内容区域 */
+  main {
+    max-width: 95%;
+    padding: 0 15px;
+  }
+  
+  /* 英雄区域调整为垂直布局 */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-content {
+    margin-bottom: 30px;
+  }
+  
+  /* 特性网格调整为单列 */
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  /* 概念卡片调整为垂直布局 */
+  .concept-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  /* 资源列表调整为单列 */
+  .resource-list {
+    grid-template-columns: 1fr;
+  }
+  
+  /* 调整字体大小以适应小屏幕 */
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+  
+  /* 调整按钮大小 */
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* 超小屏幕设备：屏幕宽度小于480px */
+@media (max-width: 480px) {
+  /* 进一步调整布局和字体大小 */
+  main {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  /* 调整标题字体大小 */
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+  }
+  
+  /* 调整段落字体大小 */
+  p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  /* 调整卡片内边距 */
+  .feature-card, .concept-card, .resource-card {
+    padding: 15px;
+  }
+  
+  /* 调整导航栏Logo大小 */
+  .logo h1 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ==================== 移动端汉堡菜单 ==================== */
+/* 汉堡菜单按钮样式 */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  padding: 10px;
+}
+
+/* 移动端导航栏样式 */
+@media (max-width: 768px) {
+  /* 显示汉堡菜单按钮 */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+  
+  /* 默认隐藏导航链接 */
+  .nav-links {
+    display: none;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* 导航链接显示时的样式 */
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* 导航链接项样式 */
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-links a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+}
