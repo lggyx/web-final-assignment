@@ -223,12 +223,8 @@ function initMobileMenu() {
     });
 }
 
-// 在DOM加载完成后初始化移动端菜单
-document.addEventListener('DOMContentLoaded', function() {
-    initMobileMenu();
-    initInteractiveComponents();
-    initSearchFunctionality();
-});
+// 移动端菜单初始化函数已集成到主DOM加载事件中
+// 避免重复的DOM加载事件监听器
 
 /**
  * 初始化交互式组件功能
