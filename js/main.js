@@ -226,6 +226,7 @@ function initMobileMenu() {
 document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initInteractiveComponents();
+    initSearchFunctionality();
 });
 
 /**
@@ -331,3 +332,16 @@ function initInteractiveCharts() {
 }
 
 console.log('交互式组件功能模块加载完成');
+
+/**
+ * 初始化搜索功能
+ */
+function initSearchFunctionality() {
+    // 检查是否已加载搜索模块
+    if (typeof initSearch !== 'undefined') {
+        initSearch();
+        console.log('搜索功能初始化完成');
+    } else {
+        console.warn('搜索模块未加载，请检查js/search.js文件');
+    }
+}
