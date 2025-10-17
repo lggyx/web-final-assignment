@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深度学习 - 大学生AI技术分享</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>🤖 AI技术分享</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="ai-basics.html">AI基础概念</a></li>
+                <li><a href="machine-learning.html">机器学习</a></li>
+                <li><a href="deep-learning.html" class="active">深度学习</a></li>
+                <li><a href="ai-applications.html">AI应用案例</a></li>
+                <li><a href="learning-resources.html">学习资源</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>深度学习</h2>
+            <p>基于神经网络的机器学习方法，模拟人脑的学习机制</p>
+        </section>
+
+        <section class="content-section">
+            <div class="concept-card">
+                <h3>深度学习概述</h3>
+                <div class="concept-content">
+                    <p>深度学习是机器学习的一个子领域，它基于人工神经网络，特别是深度神经网络。深度学习模型通过多层次的非线性变换来学习数据的高级抽象表示，能够自动提取特征并进行复杂的模式识别。</p>
+                    <div class="highlight-box">
+                        <strong>核心优势：</strong> 能够自动学习特征表示，处理复杂的非线性关系
+                    </div>
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <h3>神经网络基础</h3>
+                <div class="neural-network-basics">
+                    <div class="neural-component">
+                        <h4>神经元（Neuron）</h4>
+                        <p>神经网络的基本单元，接收输入、进行计算并产生输出</p>
+                        <div class="neuron-formula">
+                            输出 = 激活函数(权重 × 输入 + 偏置)
+                        </div>
+                    </div>
+                    <div class="neural-component">
+                        <h4>激活函数</h4>
+                        <p>为神经网络引入非线性特性的函数</p>
+                        <ul>
+                            <li><strong>Sigmoid：</strong> 将输出压缩到0-1范围</li>
+                            <li><strong>ReLU：</strong> 解决梯度消失问题，f(x) = max(0,x)</li>
+                            <li><strong>Tanh：</strong> 双曲正切函数，输出范围-1到1</li>
+                        </ul>
+                    </div>
+                    <div class="neural-component">
+                        <h4>网络结构</h4>
+                        <p>神经网络通常由多个层次组成：</p>
+                        <ul>
+                            <li><strong>输入层：</strong> 接收原始数据</li>
+                            <li><strong>隐藏层：</strong> 进行特征提取和变换</li>
+                            <li><strong>输出层：</strong> 产生最终预测结果</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <h3>主要深度学习架构</h3>
+                <div class="architecture-grid">
+                    <div class="architecture-card">
+                        <div class="arch-icon">🖼️</div>
+                        <h4>卷积神经网络 (CNN)</h4>
+                        <p>专门用于处理图像数据的神经网络架构</p>
+                        <div class="arch-features">
+                            <strong>特点：</strong>
+                            <ul>
+                                <li>卷积层提取局部特征</li>
+                                <li>池化层降低维度</li>
+                                <li>参数共享减少计算量</li>
+                            </ul>
+                        </div>
+                        <div class="arch-applications">
+                            <strong>应用：</strong> 图像识别、物体检测、人脸识别
+                        </div>
+                    </div>
+                    <div class="architecture-card">
+                        <div class="arch-icon">🔄</div>
+                        <h4>循环神经网络 (RNN)</h4>
+                        <p>能够处理序列数据的神经网络</p>
+                        <div class="arch-features">
+                            <strong>特点：</strong>
+                            <ul>
+                                <li>具有记忆功能</li>
+                                <li>能够处理变长序列</li>
+                                <li>参数共享机制</li>
+                            </ul>
+                        </div>
+                        <div class="arch-applications">
+                            <strong>应用：</strong> 语音识别、机器翻译、文本生成
+                        </div>
+                    </div>
+                    <div class="architecture-card">
+                        <div class="arch-icon">⚡</div>
+                        <h4>长短期记忆网络 (LSTM)</h4>
+                        <p>RNN的改进版本，解决长期依赖问题</p>
+                        <div class="arch-features">
+                            <strong>特点：</strong>
+                            <ul>
+                                <li>门控机制控制信息流</li>
+                                <li>能够学习长期依赖关系</li>
+                                <li>解决梯度消失问题</li>
+                            </ul>
+                        </div>
+                        <div class="arch-applications">
+                            <strong>应用：</strong> 文档摘要、情感分析、时间序列预测
+                        </div>
+                    </div>
+                    <div class="architecture-card">
+                        <div class="arch-icon">🧠</div>
+                        <h4>Transformer</h4>
+                        <p>基于注意力机制的序列处理架构</p>
+                        <div class="arch-features">
+                            <strong>特点：</strong>
+                            <ul>
+                                <li>自注意力机制</li>
+                                <li>并行处理能力</li>
+                                <li>位置编码处理序列信息</li>
+                            </ul>
+                        </div>
+                        <div class="arch-applications">
+                            <strong>应用：</strong> 大语言模型、机器翻译、问答系统
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <h3>深度学习的关键技术</h3>
+                <div class="key-technologies">
+                    <div class="tech-item">
+                        <div class="tech-icon">🔄</div>
+                        <h4>反向传播算法</h4>
+                        <p>通过计算梯度来更新网络权重，是训练神经网络的核心算法</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📉</div>
+                        <h4>梯度下降优化</h4>
+                        <p>通过最小化损失函数来优化网络参数，包括批量梯度下降、随机梯度下降等变体</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🛡️</div>
+                        <h4>正则化技术</h4>
+                        <p>防止过拟合的技术，包括Dropout、L1/L2正则化、早停等</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📊</div>
+                        <h4>批量归一化</h4>
+                        <p>标准化网络中间层的输入，加速训练并提高稳定性</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <h3>深度学习框架</h3>
+                <div class="frameworks-grid">
+                    <div class="framework-card">
+                        <div class="framework-logo">🔥</div>
+                        <h4>PyTorch</h4>
+                        <p>Facebook开发的动态图深度学习框架</p>
+                        <div class="framework-features">
+                            <strong>特点：</strong> 动态计算图、易于调试、研究友好
+                        </div>
+                    </div>
+                    <div class="framework-card">
+                        <div class="framework-logo">📈</div>
+                        <h4>TensorFlow</h4>
+                        <p>Google开发的开源机器学习框架</p>
+                        <div class="framework-features">
+                            <strong>特点：</strong> 静态计算图、生产部署友好、生态完善
+                        </div>
+                    </div>
+                    <div class="framework-card">
+                        <div class="framework-logo">🚀</div>
+                        <h4>Keras</h4>
+                        <p>高级神经网络API，现已集成到TensorFlow</p>
+                        <div class="framework-features">
+                            <strong>特点：</strong> 简洁易用、快速原型开发、模块化设计
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="navigation-links">
+            <a href="machine-learning.html" class="prev-page">
+                ← 上一章：机器学习
+            </a>
+            <a href="ai-applications.html" class="next-page">
+                下一章：AI应用案例 →
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 大学生AI技术分享平台. 让我们一起探索AI的无限可能!</p>
+        </div>
+    </footer>
+</body>
+</html>

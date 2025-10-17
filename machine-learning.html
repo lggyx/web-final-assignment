@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>机器学习 - 大学生AI技术分享</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>🤖 AI技术分享</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="ai-basics.html">AI基础概念</a></li>
+                <li><a href="machine-learning.html" class="active">机器学习</a></li>
+                <li><a href="deep-learning.html">深度学习</a></li>
+                <li><a href="ai-applications.html">AI应用案例</a></li>
+                <li><a href="learning-resources.html">学习资源</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>机器学习</h2>
+            <p>让计算机从数据中自动学习和改进的核心技术</p>
+        </section>
+
+        <section class="content-section">
+            <div class="concept-card">
+                <h3>机器学习概述</h3>
+                <div class="concept-content">
+                    <p>机器学习是人工智能的一个分支，它使计算机系统能够从数据中自动学习和改进，而无需明确编程。通过算法和统计模型，机器学习让计算机能够识别数据中的模式并做出预测或决策。</p>
+                    <div class="highlight-box">
+                        <strong>核心思想：</strong> 让计算机通过经验（数据）来改善性能
+                    </div>
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <h3>机器学习的三大类型</h3>
+                <div class="ml-types-grid">
+                    <div class="ml-type-card">
+                        <div class="type-icon">📖</div>
+                        <h4>监督学习</h4>
+                        <p>使用带有标签的训练数据来学习输入和输出之间的映射关系</p>
+                        <div class="type-examples">
+                            <strong>典型应用：</strong>
+                            <ul>
+                                <li>图像分类</li>
+                                <li>垃圾邮件检测</li>
+                                <li>房价预测</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ml-type-card">
+                        <div class="type-icon">🔍</div>
+                        <h4>无监督学习</h4>
+                        <p>从未标记的数据中发现隐藏的模式和结构</p>
+                        <div class="type-examples">
+                            <strong>典型应用：</strong>
+                            <ul>
+                                <li>客户群体分类</li>
+                                <li>异常检测</li>
+                                <li>推荐系统</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ml-type-card">
+                        <div class="type-icon">🎮</div>
+                        <h4>强化学习</h4>
+                        <p>通过与环境交互并获得奖励来学习最优策略</p>
+                        <div class="type-examples">
+                            <strong>典型应用：</strong>
+                            <ul>
+                                <li>游戏AI</li>
+                                <li>自动驾驶</li>
+                                <li>机器人控制</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <h3>经典机器学习算法</h3>
+                <div class="algorithms-grid">
+                    <div class="algorithm-category">
+                        <h4>分类算法</h4>
+                        <div class="algorithm-list">
+                            <div class="algorithm-item">
+                                <strong>逻辑回归</strong>
+                                <p>用于二分类问题的线性模型</p>
+                            </div>
+                            <div class="algorithm-item">
+                                <strong>决策树</strong>
+                                <p>基于特征划分的树形结构分类器</p>
+                            </div>
+                            <div class="algorithm-item">
+                                <strong>随机森林</strong>
+                                <p>集成多个决策树提高准确性</p>
+                            </div>
+                            <div class="algorithm-item">
+                                <strong>支持向量机</strong>
+                                <p>寻找最优分离超平面的算法</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="algorithm-category">
+                        <h4>回归算法</h4>
+                        <div class="algorithm-list">
+                            <div class="algorithm-item">
+                                <strong>线性回归</strong>
+                                <p>建立变量间线性关系的模型</p>
+                            </div>
+                            <div class="algorithm-item">
+                                <strong>多项式回归</strong>
+                                <p>处理非线性关系的扩展模型</p>
+                            </div>
+                            <div class="algorithm-item">
+                                <strong>岭回归</strong>
+                                <p>带有正则化的线性回归</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="algorithm-category">
+                        <h4>聚类算法</h4>
+                        <div class="algorithm-list">
+                            <div class="algorithm-item">
+                                <strong>K-means</strong>
+                                <p>基于距离的无监督聚类算法</p>
+                            </div>
+                            <div class="algorithm-item">
+                                <strong>层次聚类</strong>
+                                <p>构建数据层次结构的聚类方法</p>
+                            </div>
+                            <div class="algorithm-item">
+                                <strong>DBSCAN</strong>
+                                <p>基于密度的聚类算法</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <h3>机器学习工作流程</h3>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <h4>数据收集</h4>
+                        <p>收集和整理相关的训练数据</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <h4>数据预处理</h4>
+                        <p>清洗数据、处理缺失值、特征工程</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <h4>模型选择</h4>
+                        <p>根据问题类型选择合适的算法</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <h4>模型训练</h4>
+                        <p>使用训练数据来训练模型参数</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">5</div>
+                        <h4>模型评估</h4>
+                        <p>使用测试数据评估模型性能</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">6</div>
+                        <h4>模型优化</h4>
+                        <p>调整参数和特征以提高性能</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="navigation-links">
+            <a href="ai-basics.html" class="prev-page">
+                ← 上一章：AI基础概念
+            </a>
+            <a href="deep-learning.html" class="next-page">
+                下一章：深度学习 →
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 大学生AI技术分享平台. 让我们一起探索AI的无限可能!</p>
+        </div>
+    </footer>
+</body>
+</html>

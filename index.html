@@ -3,59 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI技术分享平台 - 大学生通用AI技术分享</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>大学生AI技术分享</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- 星空背景画布 -->
-    <canvas id="starCanvas"></canvas>
-    
-    <!-- 页面主要内容 -->
-    <div class="container">
-        <header>
-            <h1>大学生通用AI技术分享平台</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">首页</a></li>
-                    <li><a href="pages/chapters.html">章节内容</a></li>
-                    <li><a href="pages/about.html">关于我们</a></li>
-                    <li><a href="pages/login.html">登录/注册</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <main>
-            <section class="hero">
-                <h2>探索人工智能的无限可能</h2>
-                <p>专为大学生打造的AI技术学习与分享平台</p>
-                <button class="cta-button">开始学习</button>
-            </section>
-            
-            <section class="features">
-                <h2>平台特色</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <h3>丰富的学习资源</h3>
-                        <p>涵盖机器学习、深度学习、自然语言处理等多个AI领域</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>互动社区</h3>
-                        <p>与其他学习者交流心得，共同进步</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>实战项目</h3>
-                        <p>通过实际项目加深对AI技术的理解</p>
-                    </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>🤖 AI技术分享</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="ai-basics.html">AI基础概念</a></li>
+                <li><a href="machine-learning.html">机器学习</a></li>
+                <li><a href="deep-learning.html">深度学习</a></li>
+                <li><a href="ai-applications.html">AI应用案例</a></li>
+                <li><a href="learning-resources.html">学习资源</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>开启你的AI学习之旅</h2>
+                <p>探索人工智能的奥秘，掌握未来科技的核心技能</p>
+                <a href="ai-basics.html" class="cta-button">开始学习</a>
+            </div>
+            <div class="hero-image">
+                <div class="ai-icon">🧠</div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h3>为什么选择我们的AI学习平台？</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h4>系统化学习</h4>
+                    <p>从基础概念到高级应用，循序渐进的学习路径</p>
                 </div>
-            </section>
-        </main>
-        
-        <footer>
-            <p>&copy; 2025 大学生通用AI技术分享平台. All rights reserved.</p>
-        </footer>
-    </div>
-    
-    <script src="js/starfield.js"></script>
-    <script src="js/main.js"></script>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h4>实用案例</h4>
+                    <p>结合实际项目案例，学以致用</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h4>前沿技术</h4>
+                    <p>紧跟AI技术发展趋势，掌握最新知识</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h4>学习社区</h4>
+                    <p>与志同道合的同学一起进步</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-path">
+            <h3>推荐学习路径</h3>
+            <div class="path-container">
+                <div class="path-step">
+                    <div class="step-number">1</div>
+                    <h4>AI基础概念</h4>
+                    <p>了解人工智能的基础知识和发展历程</p>
+                </div>
+                <div class="path-arrow">→</div>
+                <div class="path-step">
+                    <div class="step-number">2</div>
+                    <h4>机器学习</h4>
+                    <p>学习机器学习的核心算法和原理</p>
+                </div>
+                <div class="path-arrow">→</div>
+                <div class="path-step">
+                    <div class="step-number">3</div>
+                    <h4>深度学习</h4>
+                    <p>掌握神经网络和深度学习技术</p>
+                </div>
+                <div class="path-arrow">→</div>
+                <div class="path-step">
+                    <div class="step-number">4</div>
+                    <h4>实际应用</h4>
+                    <p>通过项目实践巩固所学知识</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 大学生AI技术分享平台. 让我们一起探索AI的无限可能!</p>
+        </div>
+    </footer>
 </body>
 </html>
