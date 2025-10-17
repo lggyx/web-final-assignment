@@ -732,3 +732,102 @@ footer {
   padding-left: 1rem;
   font-weight: bold;
 }
+
+/* ==================== JavaScript交互样式 ==================== */
+
+/* ==================== 滚动导航栏样式 ==================== */
+/* 滚动时的导航栏样式 */
+header.scrolled {
+  background: rgba(102, 126, 234, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+}
+
+/* ==================== 返回顶部按钮样式 ==================== */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ==================== 卡片悬停动画样式 ==================== */
+/* 为所有卡片添加悬停动画基础样式 */
+.feature-card,
+.concept-card,
+.resource-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* 卡片悬停效果增强 */
+.feature-card:hover,
+.concept-card:hover,
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================== 导航链接激活状态样式 ==================== */
+/* 当前活动页面的导航链接样式 */
+.nav-links a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+}
+
+/* 导航链接激活状态的伪元素指示器 */
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* ==================== 响应式设计 - JavaScript交互样式 ==================== */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-to-top {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
