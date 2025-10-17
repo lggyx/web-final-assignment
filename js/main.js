@@ -626,3 +626,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 console.log('书签功能模块加载完成');
+
+/**
+ * 初始化学习进度跟踪功能
+ * 为用户提供学习进度管理和个性化学习路径推荐
+ */
+function initProgressTracking() {
+    console.log('学习进度跟踪功能初始化中...');
+    
+    // 检查是否已加载进度跟踪模块
+    if (typeof initProgressTracking !== 'undefined') {
+        // 延迟初始化，确保DOM完全加载
+        setTimeout(() => {
+            window.initProgressTracking();
+        }, 200);
+        console.log('学习进度跟踪功能初始化完成');
+    } else {
+        console.warn('学习进度跟踪模块未加载，请检查js/progress.js文件');
+    }
+}
+
+// 在DOM加载完成后初始化学习进度跟踪功能
+document.addEventListener('DOMContentLoaded', function() {
+    // 延迟初始化学习进度跟踪功能
+    setTimeout(() => {
+        initProgressTracking();
+    }, 150);
+});
+
+console.log('学习进度跟踪功能模块加载完成');

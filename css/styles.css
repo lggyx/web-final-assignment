@@ -2305,3 +2305,418 @@ img.lazy.loaded {
 }
 
 /* 用户反馈系统样式结束 */
+
+/* 学习进度跟踪系统样式 */
+#progress-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+#progress-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#progress-button.active {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.progress-icon {
+    font-size: 18px;
+}
+
+#progress-panel {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 350px;
+    max-height: 500px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    overflow: hidden;
+    display: none;
+}
+
+.progress-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#close-progress-panel {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-content {
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.progress-overview {
+    margin-bottom: 20px;
+}
+
+.progress-overview h4 {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+
+.overview-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.progress-bars {
+    margin-bottom: 20px;
+}
+
+.progress-bars h4 {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+
+.progress-bar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 10px;
+}
+
+.bar-label {
+    font-size: 12px;
+    color: #666;
+    min-width: 80px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.progress-percentage {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    min-width: 30px;
+}
+
+.learning-goals {
+    margin-bottom: 20px;
+}
+
+.learning-goals h4 {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+
+.goals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.goal-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.goal-checkbox {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+}
+
+.goal-checkbox:checked {
+    background: #667eea;
+    border-color: #667eea;
+}
+
+.goal-checkbox:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.goal-item label {
+    font-size: 12px;
+    color: #333;
+    cursor: pointer;
+}
+
+.personalized-recommendations {
+    margin-bottom: 20px;
+}
+
+.personalized-recommendations h4 {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+
+.recommendations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recommendation-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 3px solid #667eea;
+}
+
+.rec-icon {
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.rec-content {
+    flex: 1;
+}
+
+.rec-content strong {
+    font-size: 12px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.rec-content p {
+    font-size: 11px;
+    color: #666;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+.rec-action {
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.rec-action:hover {
+    background: #5a6fd8;
+}
+
+.no-recommendations {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.learning-stats {
+    margin-bottom: 20px;
+}
+
+.learning-stats h4 {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 15px 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.stat-icon {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.stat-desc {
+    font-size: 10px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.progress-actions {
+    padding: 15px 20px;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    gap: 10px;
+}
+
+.progress-actions button {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.progress-actions .secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.progress-actions .secondary:hover {
+    background: #5a6268;
+}
+
+.progress-actions .danger {
+    background: #dc3545;
+    color: white;
+}
+
+.progress-actions .danger:hover {
+    background: #c82333;
+}
+
+/* 进度通知样式 */
+.progress-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1001;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+}
+
+.progress-notification.show {
+    transform: translateX(0);
+}
+
+.progress-notification-success {
+    border-left: 4px solid #28a745;
+}
+
+.progress-notification-error {
+    border-left: 4px solid #dc3545;
+}
+
+.progress-notification-warning {
+    border-left: 4px solid #ffc107;
+}
+
+.progress-notification-info {
+    border-left: 4px solid #17a2b8;
+}
+
+.notification-icon {
+    font-size: 18px;
+}
+
+.notification-message {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* 学习进度跟踪系统样式结束 */
