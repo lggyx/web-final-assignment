@@ -345,3 +345,284 @@ function initSearchFunctionality() {
         console.warn('搜索模块未加载，请检查js/search.js文件');
     }
 }
+
+/**
+ * 初始化书签功能
+ * 为用户提供内容收藏和反馈机制
+ */
+function initBookmarks() {
+    console.log('书签功能初始化中...');
+    
+    // 创建书签按钮
+    const bookmarkButton = document.createElement('button');
+    bookmarkButton.className = 'bookmark-button';
+    bookmarkButton.innerHTML = `
+        <span class="bookmark-icon">🔖</span>
+        <span class="bookmark-text">我的书签</span>
+    `;
+    document.body.appendChild(bookmarkButton);
+    
+    // 创建书签面板
+    const bookmarkPanel = document.createElement('div');
+    bookmarkPanel.className = 'bookmark-panel';
+    bookmarkPanel.style.display = 'none';
+    bookmarkPanel.innerHTML = `
+        <div class="bookmark-header">
+            <h3>我的书签</h3>
+            <button id="close-bookmark-panel">✕</button>
+        </div>
+        <div class="bookmark-list">
+            <div class="empty-bookmarks">
+                <p>暂无收藏内容</p>
+                <p>点击页面中的收藏按钮添加书签</p>
+            </div>
+        </div>
+        <div class="bookmark-actions">
+            <button class="secondary" id="clear-all-bookmarks">清空全部</button>
+        </div>
+    `;
+    document.body.appendChild(bookmarkPanel);
+    
+    // 书签按钮点击事件
+    bookmarkButton.addEventListener('click', function() {
+        const isVisible = bookmarkPanel.style.display === 'block';
+        bookmarkPanel.style.display = isVisible ? 'none' : 'block';
+        this.classList.toggle('active', !isVisible);
+    });
+    
+    // 关闭书签面板
+    document.getElementById('close-bookmark-panel').addEventListener('click', function() {
+        bookmarkPanel.style.display = 'none';
+        bookmarkButton.classList.remove('active');
+    });
+    
+    // 清空全部书签
+    document.getElementById('clear-all-bookmarks').addEventListener('click', function() {
+        if (confirm('确定要清空所有书签吗？')) {
+            localStorage.removeItem('aiBookmarks');
+            updateBookmarkList();
+            showNotification('所有书签已清空', 'success');
+        }
+    });
+    
+    // 为页面内容添加收藏按钮
+    addBookmarkButtonsToContent();
+    
+    console.log('书签功能初始化完成');
+}
+
+/**
+ * 为页面内容添加收藏按钮
+ * 在每个章节标题旁添加收藏按钮
+ */
+function addBookmarkButtonsToContent() {
+    const headings = document.querySelectorAll('main h2, main h3');
+    
+    headings.forEach(heading => {
+        const bookmarkButton = document.createElement('button');
+        bookmarkButton.className = 'page-bookmark-button';
+        bookmarkButton.innerHTML = '🔖 收藏';
+        bookmarkButton.setAttribute('data-section', heading.textContent);
+        
+        // 插入到标题旁边
+        heading.style.display = 'inline-flex';
+        heading.style.alignItems = 'center';
+        heading.style.gap = '10px';
+        heading.appendChild(bookmarkButton);
+        
+        // 收藏按钮点击事件
+        bookmarkButton.addEventListener('click', function() {
+            const sectionTitle = this.getAttribute('data-section');
+            const pageTitle = document.title;
+            const pageUrl = window.location.href;
+            
+            toggleBookmark(sectionTitle, pageTitle, pageUrl, this);
+        });
+        
+        // 检查是否已收藏
+        checkBookmarkStatus(bookmarkButton, heading.textContent);
+    });
+}
+
+/**
+ * 切换书签状态
+ * 添加或移除书签
+ */
+function toggleBookmark(sectionTitle, pageTitle, pageUrl, button) {
+    const bookmarks = getBookmarks();
+    const bookmarkKey = `${pageTitle}-${sectionTitle}`;
+    
+    if (bookmarks[bookmarkKey]) {
+        // 移除书签
+        delete bookmarks[bookmarkKey];
+        button.classList.remove('bookmarked');
+        button.innerHTML = '🔖 收藏';
+        showNotification('已取消收藏', 'info');
+    } else {
+        // 添加书签
+        bookmarks[bookmarkKey] = {
+            sectionTitle: sectionTitle,
+            pageTitle: pageTitle,
+            pageUrl: pageUrl,
+            timestamp: new Date().toISOString()
+        };
+        button.classList.add('bookmarked');
+        button.innerHTML = '⭐ 已收藏';
+        showNotification('收藏成功', 'success');
+    }
+    
+    // 保存到本地存储
+    localStorage.setItem('aiBookmarks', JSON.stringify(bookmarks));
+    
+    // 更新书签列表
+    updateBookmarkList();
+}
+
+/**
+ * 检查书签状态
+ * 根据本地存储数据设置按钮状态
+ */
+function checkBookmarkStatus(button, sectionTitle) {
+    const bookmarks = getBookmarks();
+    const pageTitle = document.title;
+    const bookmarkKey = `${pageTitle}-${sectionTitle}`;
+    
+    if (bookmarks[bookmarkKey]) {
+        button.classList.add('bookmarked');
+        button.innerHTML = '⭐ 已收藏';
+    }
+}
+
+/**
+ * 获取所有书签
+ * 从本地存储中读取书签数据
+ */
+function getBookmarks() {
+    const bookmarksJson = localStorage.getItem('aiBookmarks');
+    return bookmarksJson ? JSON.parse(bookmarksJson) : {};
+}
+
+/**
+ * 更新书签列表显示
+ * 动态生成书签列表内容
+ */
+function updateBookmarkList() {
+    const bookmarkList = document.querySelector('.bookmark-list');
+    const bookmarks = getBookmarks();
+    const bookmarkKeys = Object.keys(bookmarks);
+    
+    if (bookmarkKeys.length === 0) {
+        bookmarkList.innerHTML = `
+            <div class="empty-bookmarks">
+                <p>暂无收藏内容</p>
+                <p>点击页面中的收藏按钮添加书签</p>
+            </div>
+        `;
+    } else {
+        let html = '';
+        bookmarkKeys.forEach(key => {
+            const bookmark = bookmarks[key];
+            const time = new Date(bookmark.timestamp).toLocaleString('zh-CN');
+            
+            html += `
+                <div class="bookmark-item">
+                    <div class="bookmark-content">
+                        <h4>${bookmark.sectionTitle}</h4>
+                        <p class="bookmark-page">${bookmark.pageTitle}</p>
+                        <p class="bookmark-time">${time}</p>
+                    </div>
+                    <div class="bookmark-actions">
+                        <button class="visit-bookmark" onclick="window.location.href='${bookmark.pageUrl}'">访问</button>
+                        <button class="remove-bookmark" onclick="removeBookmark('${key}')">删除</button>
+                    </div>
+                </div>
+            `;
+        });
+        bookmarkList.innerHTML = html;
+    }
+    
+    // 更新书签按钮状态
+    updateBookmarkButtonStatus();
+}
+
+/**
+ * 删除单个书签
+ * 从书签列表中移除指定书签
+ */
+function removeBookmark(key) {
+    const bookmarks = getBookmarks();
+    delete bookmarks[key];
+    localStorage.setItem('aiBookmarks', JSON.stringify(bookmarks));
+    updateBookmarkList();
+    showNotification('书签已删除', 'info');
+}
+
+/**
+ * 更新书签按钮状态
+ * 根据书签数量显示不同状态
+ */
+function updateBookmarkButtonStatus() {
+    const bookmarkButton = document.querySelector('.bookmark-button');
+    const bookmarks = getBookmarks();
+    const hasBookmarks = Object.keys(bookmarks).length > 0;
+    
+    if (hasBookmarks) {
+        bookmarkButton.classList.add('has-bookmarks');
+    } else {
+        bookmarkButton.classList.remove('has-bookmarks');
+    }
+}
+
+/**
+ * 显示通知
+ * 为用户操作提供反馈
+ */
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `bookmark-notification bookmark-notification-${type}`;
+    notification.innerHTML = `
+        <span class="notification-icon">${getNotificationIcon(type)}</span>
+        <span class="notification-message">${message}</span>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // 显示通知
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 100);
+    
+    // 3秒后隐藏并移除通知
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 300);
+    }, 3000);
+}
+
+/**
+ * 获取通知图标
+ * 根据通知类型返回对应图标
+ */
+function getNotificationIcon(type) {
+    const icons = {
+        success: '✅',
+        error: '❌',
+        warning: '⚠️',
+        info: 'ℹ️'
+    };
+    return icons[type] || 'ℹ️';
+}
+
+// 在DOM加载完成后初始化书签功能
+document.addEventListener('DOMContentLoaded', function() {
+    // 延迟初始化书签功能，确保其他模块已加载
+    setTimeout(() => {
+        initBookmarks();
+    }, 100);
+});
+
+console.log('书签功能模块加载完成');
