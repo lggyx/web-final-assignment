@@ -1,258 +1,291 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
+  <head>
     <!-- 页面基础设置 -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI应用案例 - 大学生AI技术分享</title>
     <!-- 引入样式文件 -->
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <!-- 页面头部区域 -->
     <header>
-        <!-- 导航栏 -->
-        <nav>
-            <!-- Logo区域 -->
-            <div class="logo">
-                <h1>🤖 AI技术分享</h1>
-            </div>
-            <!-- 导航链接 -->
-            <ul class="nav-links">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="ai-basics.html">AI基础概念</a></li>
-                <li><a href="machine-learning.html">机器学习</a></li>
-                <li><a href="deep-learning.html">深度学习</a></li>
-                <li><a href="ai-applications.html" class="active">AI应用案例</a></li>
-                <li><a href="learning-resources.html">学习资源</a></li>
-            </ul>
-        </nav>
+      <!-- 导航栏 -->
+      <nav>
+        <!-- Logo区域 -->
+        <div class="logo">
+          <h1>🤖 AI技术分享</h1>
+        </div>
+        <!-- 导航链接 -->
+        <ul class="nav-links">
+          <li><a href="index.html">首页</a></li>
+          <li><a href="ai-basics.html">AI基础概念</a></li>
+          <li><a href="machine-learning.html">机器学习</a></li>
+          <li><a href="deep-learning.html">深度学习</a></li>
+          <li><a href="ai-applications.html" class="active">AI应用案例</a></li>
+          <li><a href="learning-resources.html">学习资源</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section class="page-header">
-            <h2>AI应用案例</h2>
-            <p>探索人工智能在各个领域的实际应用</p>
-        </section>
+      <section class="page-header">
+        <h2>AI应用案例</h2>
+        <p>探索人工智能在各个领域的实际应用</p>
+      </section>
 
-        <section class="content-section">
-            <div class="concept-card">
-                <h3>AI在不同领域的应用</h3>
-                <p>人工智能技术已经深入到各个行业和领域，改变着我们的生活方式和工作模式。以下是一些典型的应用案例：</p>
+      <section class="content-section">
+        <div class="concept-card">
+          <h3>AI在不同领域的应用</h3>
+          <p>
+            人工智能技术已经深入到各个行业和领域，改变着我们的生活方式和工作模式。以下是一些典型的应用案例：
+          </p>
+        </div>
+
+        <div class="applications-grid">
+          <div class="application-category">
+            <div class="category-header">
+              <div class="category-icon">🏥</div>
+              <h4>医疗健康</h4>
             </div>
-
-            <div class="applications-grid">
-                <div class="application-category">
-                    <div class="category-header">
-                        <div class="category-icon">🏥</div>
-                        <h4>医疗健康</h4>
-                    </div>
-                    <div class="application-list">
-                        <div class="application-item">
-                            <h5>医学影像诊断</h5>
-                            <p>利用深度学习分析X光片、CT扫描和MRI图像，辅助医生检测肿瘤、骨折等疾病。Google Health的AI系统在乳腺癌筛查中达到了超越人类放射科医生的准确率。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>药物发现</h5>
-                            <p>通过机器学习算法预测分子结构和药物相互作用，加速新药研发过程。DeepMind的AlphaFold在蛋白质结构预测方面取得重大突破。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>个性化治疗</h5>
-                            <p>基于患者的基因组数据、病史和生活习惯，为患者制定个性化的治疗方案。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="application-category">
-                    <div class="category-header">
-                        <div class="category-icon">🚗</div>
-                        <h4>交通运输</h4>
-                    </div>
-                    <div class="application-list">
-                        <div class="application-item">
-                            <h5>自动驾驶</h5>
-                            <p>Tesla、Waymo等公司开发的自动驾驶系统使用计算机视觉、传感器融合和深度学习技术，实现车辆的自主导航和安全驾驶。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>智能交通管理</h5>
-                            <p>通过AI分析交通流量数据，优化信号灯控制，减少拥堵。阿里巴巴的"城市大脑"项目在杭州显著改善了交通效率。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>预测性维护</h5>
-                            <p>分析车辆传感器数据，预测潜在故障，提前进行维护，降低运营成本。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="application-category">
-                    <div class="category-header">
-                        <div class="category-icon">💰</div>
-                        <h4>金融服务</h4>
-                    </div>
-                    <div class="application-list">
-                        <div class="application-item">
-                            <h5>风险评估</h5>
-                            <p>利用机器学习分析客户的信用历史、收入水平和行为模式，评估贷款风险。支付宝的芝麻信用就是典型的AI信用评估系统。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>欺诈检测</h5>
-                            <p>实时监控交易行为，识别异常模式，预防信用卡欺诈和金融犯罪。机器学习模型能够在毫秒级别检测可疑交易。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>智能投顾</h5>
-                            <p>基于客户的风险偏好和市场数据，提供个性化的投资建议和资产配置方案。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="application-category">
-                    <div class="category-header">
-                        <div class="category-icon">🎓</div>
-                        <h4>教育科技</h4>
-                    </div>
-                    <div class="application-list">
-                        <div class="application-item">
-                            <h5>个性化学习</h5>
-                            <p>Khan Academy、Coursera等平台使用AI分析学生的学习行为和知识掌握情况，提供个性化的学习路径和内容推荐。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>智能辅导</h5>
-                            <p>AI辅导系统能够回答学生的问题，提供即时反馈，如Carnegie Learning的认知辅导系统。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>自动评分</h5>
-                            <p>使用自然语言处理技术自动评估作文和开放性答案，减轻教师工作负担。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="application-category">
-                    <div class="category-header">
-                        <div class="category-icon">🛍️</div>
-                        <h4>零售电商</h4>
-                    </div>
-                    <div class="application-list">
-                        <div class="application-item">
-                            <h5>推荐系统</h5>
-                            <p>淘宝、京东、亚马逊等电商平台的推荐算法分析用户行为和偏好，提供个性化商品推荐，显著提升销售转化率。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>智能客服</h5>
-                            <p>阿里巴巴的"小蜜"、京东的"JIMI"等AI客服能够处理大量客户咨询，提供24小时服务，解答常见问题。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>价格优化</h5>
-                            <p>动态调整商品价格，基于市场需求、竞争对手价格和库存情况进行实时定价。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="application-category">
-                    <div class="category-header">
-                        <div class="category-icon">🎬</div>
-                        <h4>娱乐媒体</h4>
-                    </div>
-                    <div class="application-list">
-                        <div class="application-item">
-                            <h5>内容推荐</h5>
-                            <p>抖音、B站、Netflix等平台使用AI分析用户观看历史和互动行为，推荐个性化视频内容，大幅提升用户粘性。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>内容生成</h5>
-                            <p>AI能够生成音乐、绘画、写作等创意内容。OpenAI的DALL-E可以生成高质量的图像，ChatGPT能够创作文章和诗歌。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>视频分析</h5>
-                            <p>自动识别视频内容，进行分类、标签生成和内容审核，帮助平台管理海量视频内容。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="application-category">
-                    <div class="category-header">
-                        <div class="category-icon">🏭</div>
-                        <h4>智能制造</h4>
-                    </div>
-                    <div class="application-list">
-                        <div class="application-item">
-                            <h5>质量检测</h5>
-                            <p>使用计算机视觉技术自动检测产品缺陷，提高质检效率和准确性。富士康使用AI视觉检测系统检查iPhone零部件质量。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>预测性维护</h5>
-                            <p>通过分析设备传感器数据，预测设备故障，提前进行维护，减少停机时间。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>供应链优化</h5>
-                            <p>AI分析市场需求、库存水平和物流数据，优化供应链管理，降低成本。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="application-category">
-                    <div class="category-header">
-                        <div class="category-icon">🌾</div>
-                        <h4>农业环保</h4>
-                    </div>
-                    <div class="application-list">
-                        <div class="application-item">
-                            <h5>精准农业</h5>
-                            <p>使用无人机、传感器和AI分析土壤、气候和作物数据，优化灌溉、施肥和病虫害防治。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>作物病害识别</h5>
-                            <p>通过图像识别技术识别作物病害，农民可以用手机拍照获得诊断结果和治疗建议。</p>
-                        </div>
-                        <div class="application-item">
-                            <h5>环境监测</h5>
-                            <p>分析卫星图像和传感器数据，监测森林砍伐、空气污染、水质变化等环境问题。</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="application-list">
+              <div class="application-item">
+                <h5>医学影像诊断</h5>
+                <p>
+                  利用深度学习分析X光片、CT扫描和MRI图像，辅助医生检测肿瘤、骨折等疾病。Google
+                  Health的AI系统在乳腺癌筛查中达到了超越人类放射科医生的准确率。
+                </p>
+              </div>
+              <div class="application-item">
+                <h5>药物发现</h5>
+                <p>
+                  通过机器学习算法预测分子结构和药物相互作用，加速新药研发过程。DeepMind的AlphaFold在蛋白质结构预测方面取得重大突破。
+                </p>
+              </div>
+              <div class="application-item">
+                <h5>个性化治疗</h5>
+                <p>基于患者的基因组数据、病史和生活习惯，为患者制定个性化的治疗方案。</p>
+              </div>
             </div>
+          </div>
 
-            <div class="concept-card">
-                <h3>成功案例分析</h3>
-                <div class="case-studies">
-                    <div class="case-study">
-                        <h4>AlphaGo - 围棋AI的突破</h4>
-                        <p>DeepMind开发的AlphaGo在2016年击败了世界围棋冠军李世石，标志着AI在复杂策略游戏中的重大突破。AlphaGo结合了深度神经网络和蒙特卡洛树搜索，通过自我对弈学习围棋策略。</p>
-                        <div class="case-impact">
-                            <strong>影响：</strong> 推动了强化学习和博弈论的发展，展示了AI在复杂决策问题中的潜力。
-                        </div>
-                    </div>
-                    <div class="case-study">
-                        <h4>GPT系列 - 大语言模型的崛起</h4>
-                        <p>OpenAI的GPT系列模型展示了大规模预训练在语言理解和生成方面的强大能力。GPT-3拥有1750亿参数，能够进行对话、写作、编程等多种任务。</p>
-                        <div class="case-impact">
-                            <strong>影响：</strong> 引领了大模型时代，推动了自然语言处理技术的商业化应用。
-                        </div>
-                    </div>
-                    <div class="case-study">
-                        <h4>人脸识别技术 - 安防领域的革新</h4>
-                        <p>Face++、商汤科技等公司的人脸识别技术在安防、金融、零售等领域广泛应用。技术准确率达到99%以上，大幅提升了身份验证的效率和安全性。</p>
-                        <div class="case-impact">
-                            <strong>影响：</strong> 改变了安防行业的格局，推动了"刷脸"时代的到来。
-                        </div>
-                    </div>
-                </div>
+          <div class="application-category">
+            <div class="category-header">
+              <div class="category-icon">🚗</div>
+              <h4>交通运输</h4>
             </div>
-        </section>
+            <div class="application-list">
+              <div class="application-item">
+                <h5>自动驾驶</h5>
+                <p>
+                  Tesla、Waymo等公司开发的自动驾驶系统使用计算机视觉、传感器融合和深度学习技术，实现车辆的自主导航和安全驾驶。
+                </p>
+              </div>
+              <div class="application-item">
+                <h5>智能交通管理</h5>
+                <p>
+                  通过AI分析交通流量数据，优化信号灯控制，减少拥堵。阿里巴巴的"城市大脑"项目在杭州显著改善了交通效率。
+                </p>
+              </div>
+              <div class="application-item">
+                <h5>预测性维护</h5>
+                <p>分析车辆传感器数据，预测潜在故障，提前进行维护，降低运营成本。</p>
+              </div>
+            </div>
+          </div>
 
-        <section class="navigation-links">
-            <a href="deep-learning.html" class="prev-page">
-                ← 上一章：深度学习
-            </a>
-            <a href="learning-resources.html" class="next-page">
-                下一章：学习资源 →
-            </a>
-        </section>
+          <div class="application-category">
+            <div class="category-header">
+              <div class="category-icon">💰</div>
+              <h4>金融服务</h4>
+            </div>
+            <div class="application-list">
+              <div class="application-item">
+                <h5>风险评估</h5>
+                <p>
+                  利用机器学习分析客户的信用历史、收入水平和行为模式，评估贷款风险。支付宝的芝麻信用就是典型的AI信用评估系统。
+                </p>
+              </div>
+              <div class="application-item">
+                <h5>欺诈检测</h5>
+                <p>
+                  实时监控交易行为，识别异常模式，预防信用卡欺诈和金融犯罪。机器学习模型能够在毫秒级别检测可疑交易。
+                </p>
+              </div>
+              <div class="application-item">
+                <h5>智能投顾</h5>
+                <p>基于客户的风险偏好和市场数据，提供个性化的投资建议和资产配置方案。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="application-category">
+            <div class="category-header">
+              <div class="category-icon">🎓</div>
+              <h4>教育科技</h4>
+            </div>
+            <div class="application-list">
+              <div class="application-item">
+                <h5>个性化学习</h5>
+                <p>
+                  Khan
+                  Academy、Coursera等平台使用AI分析学生的学习行为和知识掌握情况，提供个性化的学习路径和内容推荐。
+                </p>
+              </div>
+              <div class="application-item">
+                <h5>智能辅导</h5>
+                <p>
+                  AI辅导系统能够回答学生的问题，提供即时反馈，如Carnegie Learning的认知辅导系统。
+                </p>
+              </div>
+              <div class="application-item">
+                <h5>自动评分</h5>
+                <p>使用自然语言处理技术自动评估作文和开放性答案，减轻教师工作负担。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="application-category">
+            <div class="category-header">
+              <div class="category-icon">🛍️</div>
+              <h4>零售电商</h4>
+            </div>
+            <div class="application-list">
+              <div class="application-item">
+                <h5>推荐系统</h5>
+                <p>
+                  淘宝、京东、亚马逊等电商平台的推荐算法分析用户行为和偏好，提供个性化商品推荐，显著提升销售转化率。
+                </p>
+              </div>
+              <div class="application-item">
+                <h5>智能客服</h5>
+                <p>
+                  阿里巴巴的"小蜜"、京东的"JIMI"等AI客服能够处理大量客户咨询，提供24小时服务，解答常见问题。
+                </p>
+              </div>
+              <div class="application-item">
+                <h5>价格优化</h5>
+                <p>动态调整商品价格，基于市场需求、竞争对手价格和库存情况进行实时定价。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="application-category">
+            <div class="category-header">
+              <div class="category-icon">🎬</div>
+              <h4>娱乐媒体</h4>
+            </div>
+            <div class="application-list">
+              <div class="application-item">
+                <h5>内容推荐</h5>
+                <p>
+                  抖音、B站、Netflix等平台使用AI分析用户观看历史和互动行为，推荐个性化视频内容，大幅提升用户粘性。
+                </p>
+              </div>
+              <div class="application-item">
+                <h5>内容生成</h5>
+                <p>
+                  AI能够生成音乐、绘画、写作等创意内容。OpenAI的DALL-E可以生成高质量的图像，ChatGPT能够创作文章和诗歌。
+                </p>
+              </div>
+              <div class="application-item">
+                <h5>视频分析</h5>
+                <p>自动识别视频内容，进行分类、标签生成和内容审核，帮助平台管理海量视频内容。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="application-category">
+            <div class="category-header">
+              <div class="category-icon">🏭</div>
+              <h4>智能制造</h4>
+            </div>
+            <div class="application-list">
+              <div class="application-item">
+                <h5>质量检测</h5>
+                <p>
+                  使用计算机视觉技术自动检测产品缺陷，提高质检效率和准确性。富士康使用AI视觉检测系统检查iPhone零部件质量。
+                </p>
+              </div>
+              <div class="application-item">
+                <h5>预测性维护</h5>
+                <p>通过分析设备传感器数据，预测设备故障，提前进行维护，减少停机时间。</p>
+              </div>
+              <div class="application-item">
+                <h5>供应链优化</h5>
+                <p>AI分析市场需求、库存水平和物流数据，优化供应链管理，降低成本。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="application-category">
+            <div class="category-header">
+              <div class="category-icon">🌾</div>
+              <h4>农业环保</h4>
+            </div>
+            <div class="application-list">
+              <div class="application-item">
+                <h5>精准农业</h5>
+                <p>使用无人机、传感器和AI分析土壤、气候和作物数据，优化灌溉、施肥和病虫害防治。</p>
+              </div>
+              <div class="application-item">
+                <h5>作物病害识别</h5>
+                <p>通过图像识别技术识别作物病害，农民可以用手机拍照获得诊断结果和治疗建议。</p>
+              </div>
+              <div class="application-item">
+                <h5>环境监测</h5>
+                <p>分析卫星图像和传感器数据，监测森林砍伐、空气污染、水质变化等环境问题。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="concept-card">
+          <h3>成功案例分析</h3>
+          <div class="case-studies">
+            <div class="case-study">
+              <h4>AlphaGo - 围棋AI的突破</h4>
+              <p>
+                DeepMind开发的AlphaGo在2016年击败了世界围棋冠军李世石，标志着AI在复杂策略游戏中的重大突破。AlphaGo结合了深度神经网络和蒙特卡洛树搜索，通过自我对弈学习围棋策略。
+              </p>
+              <div class="case-impact">
+                <strong>影响：</strong>
+                推动了强化学习和博弈论的发展，展示了AI在复杂决策问题中的潜力。
+              </div>
+            </div>
+            <div class="case-study">
+              <h4>GPT系列 - 大语言模型的崛起</h4>
+              <p>
+                OpenAI的GPT系列模型展示了大规模预训练在语言理解和生成方面的强大能力。GPT-3拥有1750亿参数，能够进行对话、写作、编程等多种任务。
+              </p>
+              <div class="case-impact">
+                <strong>影响：</strong> 引领了大模型时代，推动了自然语言处理技术的商业化应用。
+              </div>
+            </div>
+            <div class="case-study">
+              <h4>人脸识别技术 - 安防领域的革新</h4>
+              <p>
+                Face++、商汤科技等公司的人脸识别技术在安防、金融、零售等领域广泛应用。技术准确率达到99%以上，大幅提升了身份验证的效率和安全性。
+              </p>
+              <div class="case-impact">
+                <strong>影响：</strong> 改变了安防行业的格局，推动了"刷脸"时代的到来。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="navigation-links">
+        <a href="deep-learning.html" class="prev-page"> ← 上一章：深度学习 </a>
+        <a href="learning-resources.html" class="next-page"> 下一章：学习资源 → </a>
+      </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 大学生AI技术分享平台. 让我们一起探索AI的无限可能!</p>
-        </div>
+      <div class="footer-content">
+        <p>&copy; 2024 大学生AI技术分享平台. 让我们一起探索AI的无限可能!</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
