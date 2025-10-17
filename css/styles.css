@@ -1231,3 +1231,161 @@ img.lazy.loaded {
     font-size: 0.9em;
   }
 }
+
+/* ==================== 多媒体内容样式 ==================== */
+
+/* 多媒体展示区域样式 */
+.multimedia-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.media-item {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.media-item:hover {
+  transform: translateY(-5px);
+}
+
+.media-item h4 {
+  color: #667eea;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+/* 图片占位符样式 */
+.image-placeholder {
+  position: relative;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 8px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.image-placeholder img:hover {
+  transform: scale(1.02);
+}
+
+.placeholder-text {
+  color: #6c757d;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
+
+/* 视频容器样式 */
+.video-container {
+  position: relative;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-caption {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 0 0 8px 8px;
+}
+
+.video-caption p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #6c757d;
+}
+
+.video-caption strong {
+  color: #495057;
+}
+
+.media-description {
+  color: #6c757d;
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* 多媒体内容响应式设计 */
+@media (max-width: 768px) {
+  .multimedia-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .media-item {
+    padding: 15px;
+  }
+  
+  .image-placeholder {
+    min-height: 150px;
+  }
+  
+  .video-caption {
+    padding: 10px;
+  }
+}
+
+/* 图片懒加载动画 */
+img.lazy {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+img.lazy.loaded {
+  opacity: 1;
+}
+
+/* 视频加载状态指示器 */
+.video-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2em;
+}
+
+/* 多媒体内容无障碍支持 */
+.image-placeholder:focus,
+.video-container:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+  .media-item {
+    border: 2px solid #000;
+  }
+  
+  .image-placeholder {
+    background: #fff;
+    border: 1px solid #000;
+  }
+}
