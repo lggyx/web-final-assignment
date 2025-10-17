@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initCardHoverEffects();
     initScrollToTop();
+    initMobileMenu(); // 添加移动端菜单初始化
 });
 
 /**

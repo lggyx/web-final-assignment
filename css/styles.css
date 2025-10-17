@@ -1054,12 +1054,26 @@ img.lazy.loaded {
 
 /* 移动端导航栏样式 */
 @media (max-width: 768px) {
+  /* 导航栏容器适配 */
+  nav {
+    position: relative;
+    padding: 0 1rem;
+  }
+  
   /* 显示汉堡菜单按钮 */
   .menu-toggle {
     display: block;
     position: absolute;
     right: 20px;
     top: 15px;
+    z-index: 1001;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   /* 默认隐藏导航链接 */
@@ -1070,7 +1084,11 @@ img.lazy.loaded {
     position: absolute;
     top: 60px;
     left: 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 0 0 10px 10px;
+    z-index: 1000;
+    max-height: 400px;
+    overflow-y: auto;
   }
   
   /* 导航链接显示时的样式 */
@@ -1083,12 +1101,27 @@ img.lazy.loaded {
   .nav-links li {
     width: 100%;
     text-align: center;
+    margin: 0;
   }
   
   .nav-links a {
     display: block;
     padding: 15px;
     border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    text-align: center;
+    border-radius: 0;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    background-color: #667eea;
+    color: white;
+  }
+  
+  /* 导航栏滚动状态适配 */
+  header.scrolled .nav-links {
+    top: 50px;
   }
 }
 
