@@ -225,4 +225,109 @@ function initMobileMenu() {
 // 在DOM加载完成后初始化移动端菜单
 document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
+    initInteractiveComponents();
 });
+
+/**
+ * 初始化交互式组件功能
+ * 包括测验、问答等交互元素
+ */
+function initInteractiveComponents() {
+    console.log('初始化交互式组件...');
+    
+    // 初始化测验功能
+    initQuizComponents();
+    
+    // 初始化问答功能
+    initQnAComponents();
+    
+    // 初始化交互式图表
+    initInteractiveCharts();
+}
+
+/**
+ * 初始化测验组件
+ * 处理测验题目的交互逻辑
+ */
+function initQuizComponents() {
+    const quizOptions = document.querySelectorAll('.quiz-option');
+    
+    quizOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            const isCorrect = this.getAttribute('data-correct') === 'true';
+            const feedback = this.closest('.quiz-question').querySelector('.quiz-feedback');
+            const allOptions = this.closest('.quiz-options').querySelectorAll('.quiz-option');
+            
+            // 重置所有选项状态
+            allOptions.forEach(opt => {
+                opt.classList.remove('correct', 'incorrect');
+                opt.disabled = true;
+            });
+            
+            // 设置当前选项状态
+            if (isCorrect) {
+                this.classList.add('correct');
+                feedback.textContent = '✓ 回答正确！';
+                feedback.classList.add('correct');
+            } else {
+                this.classList.add('incorrect');
+                feedback.textContent = '✗ 回答错误，请再试一次！';
+                feedback.classList.add('incorrect');
+                
+                // 显示正确答案
+                const correctOption = this.closest('.quiz-options').querySelector('[data-correct="true"]');
+                if (correctOption) {
+                    correctOption.classList.add('correct');
+                }
+            }
+        });
+    });
+}
+
+/**
+ * 初始化问答组件
+ * 处理问答交互逻辑
+ */
+function initQnAComponents() {
+    // 实现问答交互逻辑
+    const qnaElements = document.querySelectorAll('.qna-item');
+    
+    qnaElements.forEach(item => {
+        const question = item.querySelector('.qna-question');
+        const answer = item.querySelector('.qna-answer');
+        
+        if (question && answer) {
+            question.addEventListener('click', function() {
+                answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+                question.classList.toggle('active');
+            });
+        }
+    });
+}
+
+/**
+ * 初始化交互式图表
+ * 处理图表交互逻辑
+ */
+function initInteractiveCharts() {
+    // 实现图表交互逻辑
+    const chartElements = document.querySelectorAll('.interactive-chart');
+    
+    chartElements.forEach(chart => {
+        const dataPoints = chart.querySelectorAll('.data-point');
+        
+        dataPoints.forEach(point => {
+            point.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.2)';
+                this.style.zIndex = '10';
+            });
+            
+            point.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.zIndex = '1';
+            });
+        });
+    });
+}
+
+console.log('交互式组件功能模块加载完成');
