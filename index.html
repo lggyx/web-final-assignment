@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大学生AI通用技术分享平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-robot"></i>
+                <span>AI技术分享</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">关于我们</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#courses" class="nav-link">课程分享</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">项目展示</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">联系我们</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主页部分 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">大学生AI通用技术分享平台</h1>
+            <p class="hero-subtitle">探索人工智能的无限可能，分享技术知识，共同成长</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('courses')">开始学习</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('projects')">查看项目</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="ai-icon">
+                <i class="fas fa-brain"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">关于我们</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>我们是一群热爱人工智能技术的大学生，致力于分享AI领域的知识和经验。通过我们的平台，你可以：</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check"></i> 学习最新的AI技术和算法</li>
+                        <li><i class="fas fa-check"></i> 参与实际项目开发</li>
+                        <li><i class="fas fa-check"></i> 与志同道合的同学交流</li>
+                        <li><i class="fas fa-check"></i> 获得职业发展指导</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>活跃成员</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>技术分享</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>20+</h3>
+                        <p>完成项目</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程分享 -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2 class="section-title">课程分享</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>机器学习基础</h3>
+                    <p>从基础概念到实际应用，全面掌握机器学习核心技术</p>
+                    <div class="course-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Scikit-learn</span>
+                    </div>
+                    <button class="btn btn-outline">查看详情</button>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>深度学习入门</h3>
+                    <p>探索神经网络的奥秘，学习TensorFlow和PyTorch框架</p>
+                    <div class="course-tags">
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">PyTorch</span>
+                    </div>
+                    <button class="btn btn-outline">查看详情</button>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>计算机视觉</h3>
+                    <p>图像识别、目标检测等计算机视觉技术应用</p>
+                    <div class="course-tags">
+                        <span class="tag">OpenCV</span>
+                        <span class="tag">CNN</span>
+                    </div>
+                    <button class="btn btn-outline">查看详情</button>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>自然语言处理</h3>
+                    <p>文本分析、情感分析、聊天机器人等NLP技术</p>
+                    <div class="course-tags">
+                        <span class="tag">NLP</span>
+                        <span class="tag">BERT</span>
+                    </div>
+                    <button class="btn btn-outline">查看详情</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">项目展示</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>智能手写识别系统</h3>
+                        <p>基于深度学习的数字和字母识别系统，准确率达到98%</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">CNN</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>智能聊天机器人</h3>
+                        <p>基于Transformer的对话系统，支持多轮对话和情感分析</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>人脸识别考勤系统</h3>
+                        <p>基于人脸识别的智能考勤系统，支持实时检测和识别</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Face Recognition</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>邮箱</h4>
+                            <p>ai-tech@university.edu.cn</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>电话</h4>
+                            <p>+86 123-4567-8900</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>地址</h4>
+                            <p>某某大学计算机学院</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="您的姓名" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="您的邮箱" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="您的消息" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">发送消息</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AI技术分享</h4>
+                    <p>致力于推广AI技术，培养更多AI人才</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#courses">课程分享</a></li>
+                        <li><a href="#projects">项目展示</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 大学生AI通用技术分享平台. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

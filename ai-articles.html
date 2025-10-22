@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI技术文章 - 大学生AI通用技术分享平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .articles-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+
+        .articles-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .articles-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .articles-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .article-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .article-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .article-content {
+            padding: 1.5rem;
+        }
+
+        .article-excerpt {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .article-tag {
+            background: #e9ecef;
+            color: #495057;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .read-more {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        .tech-topics {
+            background: #f8f9fa;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .topic-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .topic-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+
+        .topic-card h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .articles-hero h1 {
+                font-size: 2rem;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .topics-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-robot"></i>
+                <span>AI技术分享</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">关于我们</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#courses" class="nav-link">课程分享</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ai-articles.html" class="nav-link active">技术文章</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#projects" class="nav-link">项目展示</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">联系我们</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 文章页面头部 -->
+    <section class="articles-hero">
+        <div class="container">
+            <h1>AI技术文章</h1>
+            <p>深入探索人工智能的前沿技术和应用实践</p>
+        </div>
+    </section>
+
+    <!-- 文章列表 -->
+    <section class="articles-container">
+        <div class="articles-grid">
+            <!-- 文章1 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <h3 class="article-title">深度学习在计算机视觉中的应用</h3>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> 张同学</span>
+                        <span><i class="fas fa-calendar"></i> 2024-10-15</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <p class="article-excerpt">
+                        本文详细介绍了深度学习在计算机视觉领域的最新应用，包括图像分类、目标检测、图像分割等核心技术。通过实际案例分析，帮助读者理解CNN、R-CNN、YOLO等算法的原理和应用场景。
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">计算机视觉</span>
+                        <span class="article-tag">深度学习</span>
+                        <span class="article-tag">CNN</span>
+                        <span class="article-tag">目标检测</span>
+                    </div>
+                    <a href="#" class="read-more">
+                        阅读全文 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 文章2 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <h3 class="article-title">自然语言处理中的Transformer架构解析</h3>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> 李同学</span>
+                        <span><i class="fas fa-calendar"></i> 2024-10-12</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <p class="article-excerpt">
+                        Transformer架构彻底改变了自然语言处理领域，本文从注意力机制的原理出发，详细解析了Transformer的结构和工作原理，并介绍了BERT、GPT等基于Transformer的经典模型。
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">自然语言处理</span>
+                        <span class="article-tag">Transformer</span>
+                        <span class="article-tag">BERT</span>
+                        <span class="article-tag">注意力机制</span>
+                    </div>
+                    <a href="#" class="read-more">
+                        阅读全文 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 文章3 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <h3 class="article-title">机器学习算法在推荐系统中的应用</h3>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> 王同学</span>
+                        <span><i class="fas fa-calendar"></i> 2024-10-10</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <p class="article-excerpt">
+                        推荐系统是机器学习最成功的应用之一，本文介绍了协同过滤、内容过滤、深度学习等推荐算法，并通过实际案例展示了如何构建一个高效的推荐系统。
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">推荐系统</span>
+                        <span class="article-tag">协同过滤</span>
+                        <span class="article-tag">机器学习</span>
+                        <span class="article-tag">深度学习</span>
+                    </div>
+                    <a href="#" class="read-more">
+                        阅读全文 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 文章4 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <h3 class="article-title">强化学习入门：从Q学习到深度Q网络</h3>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> 陈同学</span>
+                        <span><i class="fas fa-calendar"></i> 2024-10-08</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <p class="article-excerpt">
+                        强化学习是AI领域的重要分支，本文从基础的Q学习算法开始，逐步介绍深度Q网络（DQN）的原理和实现，并通过简单的游戏案例帮助读者理解强化学习的核心概念。
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">强化学习</span>
+                        <span class="article-tag">Q学习</span>
+                        <span class="article-tag">深度Q网络</span>
+                        <span class="article-tag">DQN</span>
+                    </div>
+                    <a href="#" class="read-more">
+                        阅读全文 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 文章5 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <h3 class="article-title">生成对抗网络（GAN）原理与实践</h3>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> 刘同学</span>
+                        <span><i class="fas fa-calendar"></i> 2024-10-05</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <p class="article-excerpt">
+                        生成对抗网络是深度学习领域的突破性技术，本文详细介绍了GAN的基本原理、网络结构、训练过程，并通过图像生成的实际案例展示了GAN的强大能力。
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">生成对抗网络</span>
+                        <span class="article-tag">GAN</span>
+                        <span class="article-tag">图像生成</span>
+                        <span class="article-tag">深度学习</span>
+                    </div>
+                    <a href="#" class="read-more">
+                        阅读全文 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 文章6 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <h3 class="article-title">时间序列预测中的LSTM网络应用</h3>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> 赵同学</span>
+                        <span><i class="fas fa-calendar"></i> 2024-10-03</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <p class="article-excerpt">
+                        长短期记忆网络（LSTM）在处理时间序列数据方面表现出色，本文介绍了LSTM的基本原理，并通过股票价格预测、天气预测等实际案例展示了LSTM的应用。
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">时间序列</span>
+                        <span class="article-tag">LSTM</span>
+                        <span class="article-tag">循环神经网络</span>
+                        <span class="article-tag">预测模型</span>
+                    </div>
+                    <a href="#" class="read-more">
+                        阅读全文 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        <!-- 技术专题 -->
+        <section class="tech-topics">
+            <div class="container">
+                <h2 class="section-title">技术专题</h2>
+                <div class="topics-grid">
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>深度学习</h4>
+                        <p>神经网络、CNN、RNN、Transformer等核心算法</p>
+                    </div>
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h4>计算机视觉</h4>
+                        <p>图像识别、目标检测、图像分割等技术</p>
+                    </div>
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>自然语言处理</h4>
+                        <p>文本分析、情感分析、机器翻译等应用</p>
+                    </div>
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>强化学习</h4>
+                        <p>Q学习、策略梯度、深度强化学习算法</p>
+                    </div>
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>数据科学</h4>
+                        <p>数据分析、特征工程、模型评估等</p>
+                    </div>
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>AI工程化</h4>
+                        <p>模型部署、MLOps、性能优化等实践</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AI技术分享</h4>
+                    <p>致力于推广AI技术，培养更多AI人才</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#about">关于我们</a></li>
+                        <li><a href="index.html#courses">课程分享</a></li>
+                        <li><a href="ai-articles.html">技术文章</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 大学生AI通用技术分享平台. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
