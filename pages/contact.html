@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 | Campus AI Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="navbar">
+            <a class="branding" href="../index.html">
+                <span class="branding-logo">AI</span>
+                <span class="branding-text">
+                    <span class="branding-name">Campus AI Hub</span>
+                    <span class="branding-tagline">大学生AI通用技术分享</span>
+                </span>
+            </a>
+            <nav class="primary-nav" aria-label="主导航">
+                <a href="../index.html">首页</a>
+                <a href="categories.html">技术分类</a>
+                <a href="article.html">文章详情</a>
+                <a href="about.html">关于我们</a>
+                <a href="contact.html" aria-current="page">联系我们</a>
+            </nav>
+            <div class="nav-controls">
+                <div class="action-buttons">
+                    <a class="btn-secondary btn" href="../index.html#latest">最新分享</a>
+                    <a class="btn" href="../index.html#resources">精选资源</a>
+                </div>
+                <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="contact-title">
+            <div class="hero-content">
+                <span class="hero-eyebrow">联系我们</span>
+                <h1 id="contact-title" class="hero-title">我们期待听到你的声音</h1>
+                <p class="hero-description">
+                    无论是技术问题、合作建议，还是想要加入我们的团队，都欢迎与我们联系。
+                    我们会在 24 小时内回复你的消息。
+                </p>
+            </div>
+            <div class="hero-metrics" aria-label="联系信息">
+                <article class="metric-card">
+                    <span class="metric-value" data-metric="response">24 小时</span>
+                    <span class="metric-label">平均回复时间</span>
+                </article>
+                <article class="metric-card">
+                    <span class="metric-value" data-metric="members">50+</span>
+                    <span class="metric-label">活跃志愿者</span>
+                </article>
+                <article class="metric-card">
+                    <span class="metric-value" data-metric="universities">15+</span>
+                    <span class="metric-label">合作高校</span>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="contact-form-title">
+            <header class="section-heading">
+                <h2 id="contact-form-title" class="section-title">发送消息</h2>
+                <p class="section-subtitle">填写表单，我们会尽快与你联系</p>
+            </header>
+            
+            <div class="featured-resources">
+                <form class="comment-form" id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="contact-name">姓名</label>
+                        <input id="contact-name" name="name" type="text" autocomplete="name" required placeholder="请输入你的姓名">
+                        <span class="validation-message" data-for="contact-name"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">邮箱</label>
+                        <input id="contact-email" name="email" type="email" autocomplete="email" required placeholder="name@example.com">
+                        <span class="validation-message" data-for="contact-email"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">主题</label>
+                        <select id="contact-subject" name="subject" required>
+                            <option value="">请选择联系主题</option>
+                            <option value="technical">技术问题咨询</option>
+                            <option value="collaboration">合作建议</option>
+                            <option value="join-team">申请加入团队</option>
+                            <option value="feedback">产品反馈</option>
+                            <option value="other">其他</option>
+                        </select>
+                        <span class="validation-message" data-for="contact-subject"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">详细内容</label>
+                        <textarea id="contact-message" name="message" required placeholder="请详细描述你的问题或建议" rows="6"></textarea>
+                        <span class="validation-message" data-for="contact-message"></span>
+                    </div>
+                    <button class="btn" type="submit">发送消息</button>
+                    <div id="contact-feedback" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+
+        <section aria-labelledby="contact-info-title">
+            <header class="section-heading">
+                <h2 id="contact-info-title" class="section-title">其他联系方式</h2>
+                <p class="section-subtitle">也可以通过以下方式与我们取得联系</p>
+            </header>
+            
+            <div class="card-grid">
+                <article class="article-card">
+                    <h3 class="article-title">邮箱联系</h3>
+                    <p class="article-summary">
+                        发送邮件至：<a href="mailto:contact@campusaihub.com">contact@campusaihub.com</a>
+                    </p>
+                    <div class="tag-list">
+                        <span class="tag">一般咨询</span>
+                        <span class="tag">合作洽谈</span>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <h3 class="article-title">技术支持</h3>
+                    <p class="article-summary">
+                        技术问题请发送至：<a href="mailto:support@campusaihub.com">support@campusaihub.com</a>
+                    </p>
+                    <div class="tag-list">
+                        <span class="tag">Bug 反馈</span>
+                        <span class="tag">技术咨询</span>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <h3 class="article-title">社交媒体</h3>
+                    <p class="article-summary">
+                        关注我们的社交媒体账号，获取最新动态
+                    </p>
+                    <div class="resource-links">
+                        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+                        <a href="https://www.bilibili.com" target="_blank" rel="noopener">B站</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="community-callout" aria-labelledby="faq-title">
+            <div class="community-content">
+                <h2 id="faq-title" class="community-title">常见问题</h2>
+                <p class="community-description">
+                    在联系我们之前，可以先查看常见问题解答，也许能更快解决你的疑问。
+                </p>
+                <div class="community-actions">
+                    <a class="btn" href="#faq-list">查看常见问题</a>
+                </div>
+            </div>
+            
+            <div class="related-list" id="faq-list">
+                <article class="related-item">
+                    <div>
+                        <h3>如何加入 Campus AI Hub 团队？</h3>
+                        <p>我们欢迎所有对 AI 技术有热情的同学加入。请通过联系表单选择"申请加入团队"主题，我们会安排面试。</p>
+                    </div>
+                </article>
+                <article class="related-item">
+                    <div>
+                        <h3>可以转载网站上的文章吗？</h3>
+                        <p>欢迎非商业用途的转载，但请注明出处并保留原文链接。商业用途请联系我们获取授权。</p>
+                    </div>
+                </article>
+                <article class="related-item">
+                    <div>
+                        <h3>如何提交技术文章？</h3>
+                        <p>请将文章发送至 support@campusaihub.com，我们的编辑团队会进行审核并与你联系。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <section class="footer-branding" aria-label="站点信息">
+                <div class="branding">
+                    <span class="branding-logo">AI</span>
+                    <span class="branding-text">
+                        <span class="branding-name">Campus AI Hub</span>
+                        <span class="branding-tagline">大学生AI通用技术分享</span>
+                    </span>
+                </div>
+                <p class="section-subtitle">
+                    与校园学习者共建的开放社区，分享最实用的 AI 学习资源与项目经验。
+                </p>
+                <div class="footer-social" aria-label="社交媒体">
+                    <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.bilibili.com" target="_blank" rel="noopener">B站</a>
+                </div>
+            </section>
+            <section class="footer-links" aria-label="快速链接">
+                <strong>导航</strong>
+                <a href="../index.html">首页</a>
+                <a href="categories.html">技术分类</a>
+                <a href="article.html">文章详情</a>
+                <a href="about.html">关于我们</a>
+                <a href="contact.html">联系我们</a>
+            </section>
+            <section class="footer-links" aria-label="学习资源">
+                <strong>资源</strong>
+                <a href="#">星标文章</a>
+                <a href="#">学习路线图</a>
+                <a href="#">开源项目</a>
+                <a href="#">视频课程</a>
+            </section>
+        </div>
+        <div class="footer-meta">
+            <span>© 2025 Campus AI Hub. 保留所有权利。</span>
+            <a href="#">隐私政策</a>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="back-to-top" class="back-to-top" aria-label="回到顶部" title="回到顶部">
+        ↑
+    </button>
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/contact.js" defer></script>
+    <script src="../js/back-to-top.js" defer></script>
+</body>
+</html>

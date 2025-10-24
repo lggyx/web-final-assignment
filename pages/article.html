@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章详情 | Campus AI Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="navbar">
+            <a class="branding" href="../index.html">
+                <span class="branding-logo">AI</span>
+                <span class="branding-text">
+                    <span class="branding-name">Campus AI Hub</span>
+                    <span class="branding-tagline">大学生AI通用技术分享</span>
+                </span>
+            </a>
+            <nav class="primary-nav" aria-label="主导航">
+                <a href="../index.html">首页</a>
+                <a href="categories.html">技术分类</a>
+                <a href="article.html" aria-current="page">文章详情</a>
+                <a href="about.html">关于我们</a>
+                <a href="contact.html">联系我们</a>
+            </nav>
+            <div class="nav-controls">
+                <div class="action-buttons">
+                    <a class="btn-secondary btn" href="../index.html#latest">最新分享</a>
+                    <a class="btn" href="../index.html#resources">精选资源</a>
+                </div>
+                <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <nav class="section-heading" aria-label="面包屑导航">
+            <a class="btn-secondary btn" href="categories.html">← 返回分类</a>
+            <span class="category-pill">机器学习 · 校园项目实践</span>
+        </nav>
+
+        <article class="article-container" aria-labelledby="article-title">
+            <header class="article-header">
+                <h1 id="article-title" class="hero-title">从零构建校园 AI 助教：自然语言问答系统实战</h1>
+                <div class="article-metadata">
+                    <span>作者：李思源 · 华中科技大学 AI 社团</span>
+                    <span>发布日期：2025 年 10 月 10 日</span>
+                    <span>阅读时长：12 分钟</span>
+                </div>
+                <div class="article-banner">
+                    <img src="../img/article-banner-placeholder.jpg" alt="校园 AI 助教项目演示">
+                </div>
+            </header>
+
+            <section class="article-content" id="article-body">
+                <p>
+                    在校园教学场景中，面向课程答疑的人工智能助教越来越普及。本篇文章将结合华中科技大学人工智能协会的实践，讲述如何从零设计、训练并部署一个面向校园课程的自然语言问答系统。
+                </p>
+                <div class="article-highlight">
+                    本项目基于开源大语言模型，结合课程资料建立向量检索知识库，并通过前端 Web 应用为教师与同学提供即时问答入口。
+                </div>
+                <h2>一、需求分析与系统架构</h2>
+                <p>
+                    开发初期，我们通过问卷与访谈收集了 120 余位同学的需求，总结出课程答疑系统的关键指标：覆盖主要教材、支持多轮问答、提供可信参考资料、操作流程简洁。为此，我们设计了包含知识库构建、检索问答、反馈迭代三个核心模块的整体架构。
+                </p>
+                <h2>二、数据构建与向量检索</h2>
+                <p>
+                    数据准备阶段选择了课程 PPT、课堂问答记录与教材章节作为语料源。使用 Python 编写脚本对文档进行分段，并借助嵌入模型生成向量，将结果存储在开源向量数据库中。我们推荐在校园内部署 Qdrant 或 Milvus，以确保数据安全与访问速度。
+                </p>
+                <h2>三、模型微调与提示词设计</h2>
+                <p>
+                    针对课程专业词汇，我们在开源中文大语言模型基础上进行指令微调。同时，设计了多轮对话提示模板，确保模型回答时能引用知识库检索结果，并在回应末尾输出参考资料编号，增强可追溯性。
+                </p>
+                <h2>四、前端交互设计与用户体验</h2>
+                <p>
+                    在前端层面，我们围绕简洁、可信、可分享的目标进行设计。页面白色为主、辅以校园品牌色，提供“课程选择”“问题输入”“回答展示”“参考资料卡片”等模块，使师生能够快速上手，且支持将问答结果导出为 PDF 方便留存。
+                </p>
+                <div class="article-highlight">
+                    当用户提交新问题时，我们优先在知识库中检索前三条相关内容，再结合语言模型生成回答，同时提示用户继续完善课程资料，提高答案质量。
+                </div>
+                <h2>五、部署与校园推广</h2>
+                <p>
+                    部署阶段我们采用容器化方式，将后端服务与前端静态资源分别部署在校园云主机。为应对高峰期访问，还通过队列机制对问答请求进行排队。推广方面，我们通过课堂宣讲、社团体验会吸引首批种子用户，并根据反馈优化功能。
+                </p>
+            </section>
+        </article>
+
+        <section class="related-articles" aria-labelledby="related-title">
+            <h2 id="related-title" class="section-title">相关文章推荐</h2>
+            <div class="related-list" id="related-list" aria-live="polite" role="list"></div>
+        </section>
+
+        <section class="comment-section" aria-labelledby="comment-title">
+            <h2 id="comment-title" class="comment-title">评论交流</h2>
+            <p class="section-subtitle">分享你的学习心得或向作者提问，文明交流共同进步。</p>
+            <form class="comment-form" id="comment-form" novalidate>
+                <div class="form-group">
+                    <label for="comment-name">昵称</label>
+                    <input id="comment-name" name="name" type="text" autocomplete="name" required placeholder="请输入你的昵称">
+                    <span class="validation-message" data-for="comment-name"></span>
+                </div>
+                <div class="form-group">
+                    <label for="comment-email">邮箱（不会公开）</label>
+                    <input id="comment-email" name="email" type="email" autocomplete="email" required placeholder="name@example.com">
+                    <span class="validation-message" data-for="comment-email"></span>
+                </div>
+                <div class="form-group">
+                    <label for="comment-content">评论内容</label>
+                    <textarea id="comment-content" name="content" required placeholder="分享你的观点或提出问题"></textarea>
+                    <span class="validation-message" data-for="comment-content"></span>
+                </div>
+                <button class="btn" type="submit">发布评论</button>
+                <div id="comment-feedback" role="status" aria-live="polite"></div>
+            </form>
+            <div class="comment-list" id="comment-list" aria-live="polite"></div>
+            <div class="empty-state" id="comment-empty-state">还没有评论，快来抢沙发吧！</div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <section class="footer-branding" aria-label="站点信息">
+                <div class="branding">
+                    <span class="branding-logo">AI</span>
+                    <span class="branding-text">
+                        <span class="branding-name">Campus AI Hub</span>
+                        <span class="branding-tagline">大学生AI通用技术分享</span>
+                    </span>
+                </div>
+                <p class="section-subtitle">
+                    Campus AI Hub 与高校社团共建真实案例，助力每一位学习者成为 AI 时代的创造者。
+                </p>
+                <div class="footer-social" aria-label="社交媒体">
+                    <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.bilibili.com" target="_blank" rel="noopener">B站</a>
+                </div>
+            </section>
+            <section class="footer-links" aria-label="快速链接">
+                <strong>导航</strong>
+                <a href="../index.html">首页</a>
+                <a href="categories.html">技术分类</a>
+                <a href="article.html">文章详情</a>
+                <a href="../index.html#community">社区活动</a>
+            </section>
+            <section class="footer-links" aria-label="学习资源">
+                <strong>资源</strong>
+                <a href="#">星标文章</a>
+                <a href="#">学习路线图</a>
+                <a href="#">开源项目</a>
+                <a href="#">视频课程</a>
+            </section>
+        </div>
+        <div class="footer-meta">
+            <span>© 2025 Campus AI Hub. 保留所有权利。</span>
+            <a href="#">隐私政策</a>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="back-to-top" class="back-to-top" aria-label="回到顶部" title="回到顶部">
+        ↑
+    </button>
+
+    <script src="../js/article.js" defer></script>
+    <script src="../js/back-to-top.js" defer></script>
+</body>
+</html>

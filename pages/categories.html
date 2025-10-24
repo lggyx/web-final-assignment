@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术分类 | Campus AI Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="navbar">
+            <a class="branding" href="../index.html">
+                <span class="branding-logo">AI</span>
+                <span class="branding-text">
+                    <span class="branding-name">Campus AI Hub</span>
+                    <span class="branding-tagline">大学生AI通用技术分享</span>
+                </span>
+            </a>
+            <nav class="primary-nav" aria-label="主导航">
+                <a href="../index.html">首页</a>
+                <a href="categories.html" aria-current="page">技术分类</a>
+                <a href="article.html">文章详情</a>
+                <a href="about.html">关于我们</a>
+                <a href="contact.html">联系我们</a>
+            </nav>
+            <div class="nav-controls">
+                <div class="action-buttons">
+                    <a class="btn-secondary btn" href="../index.html#latest">最新分享</a>
+                    <a class="btn" href="../index.html#resources">精选资源</a>
+                </div>
+                <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <header class="hero" aria-labelledby="category-title">
+            <div class="hero-content">
+                <span class="hero-eyebrow">按主题探索 AI 技术</span>
+                <h1 id="category-title" class="hero-title">从基础理论到实践项目，精准匹配学习目标</h1>
+                <p class="hero-description">
+                    通过标签筛选匹配你最关心的 AI 学习方向。每个分类都精选了最新的校园项目、课程推荐与实践经验，帮助你高效进阶。
+                </p>
+                <div class="hero-actions">
+                    <button class="btn" type="button" id="reset-filters">重置筛选</button>
+                    <a class="btn-secondary btn" href="article.html">阅读最新文章</a>
+                </div>
+            </div>
+            <div class="hero-metrics" aria-label="学习路径建议">
+                <article class="metric-card">
+                    <span class="metric-value" data-metric="tracks">6 条</span>
+                    <span class="metric-label">学习路径</span>
+                </article>
+                <article class="metric-card">
+                    <span class="metric-value" data-metric="projects">24 个</span>
+                    <span class="metric-label">开源项目</span>
+                </article>
+                <article class="metric-card">
+                    <span class="metric-value" data-metric="mentors">18 位</span>
+                    <span class="metric-label">校园导师</span>
+                </article>
+            </div>
+        </header>
+
+        <section aria-labelledby="filter-title">
+            <div class="section-heading">
+                <div>
+                    <h2 id="filter-title" class="section-title">筛选与分类</h2>
+                    <p class="section-subtitle">从技能层级、学习时长与应用场景等维度快速定位内容。</p>
+                </div>
+                <button class="btn-secondary btn" type="button" id="toggle-compact">切换紧凑视图</button>
+            </div>
+            <div class="filter-bar" role="toolbar" aria-label="分类筛选">
+                <div class="filter-buttons" id="topic-filters" aria-label="技术领域"></div>
+                <div class="filter-buttons" id="level-filters" aria-label="难度等级"></div>
+            </div>
+        </section>
+
+        <section aria-labelledby="category-list-title">
+            <header class="section-heading">
+                <div>
+                    <h2 id="category-list-title" class="section-title">分类内容</h2>
+                    <p class="section-subtitle">基于真实校园项目与课程反馈整理，覆盖理论、工具与实践。</p>
+                </div>
+                <span class="category-pill" id="result-count">共 0 个分类</span>
+            </header>
+            <div class="category-grid" id="category-grid" aria-live="polite" role="list"></div>
+        </section>
+
+        <section class="featured-resources" aria-labelledby="roadmap-title">
+            <header class="section-heading">
+                <div>
+                    <h2 id="roadmap-title" class="section-title">学习路线图</h2>
+                    <p class="section-subtitle">按照时间规划与技能增长安排任务，配合专题项目掌握核心能力。</p>
+                </div>
+            </header>
+            <div class="resource-list" id="roadmap-list" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <section class="footer-branding" aria-label="站点信息">
+                <div class="branding">
+                    <span class="branding-logo">AI</span>
+                    <span class="branding-text">
+                        <span class="branding-name">Campus AI Hub</span>
+                        <span class="branding-tagline">大学生AI通用技术分享</span>
+                    </span>
+                </div>
+                <p class="section-subtitle">
+                    与校园学习者共建的开放社区，分享最实用的 AI 学习资源与项目经验。
+                </p>
+                <div class="footer-social" aria-label="社交媒体">
+                    <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.bilibili.com" target="_blank" rel="noopener">B站</a>
+                </div>
+            </section>
+            <section class="footer-links" aria-label="快速链接">
+                <strong>导航</strong>
+                <a href="../index.html">首页</a>
+                <a href="categories.html">技术分类</a>
+                <a href="article.html">文章详情</a>
+                <a href="../index.html#community">社区活动</a>
+            </section>
+            <section class="footer-links" aria-label="学习资源">
+                <strong>资源</strong>
+                <a href="#">星标文章</a>
+                <a href="#">学习路线图</a>
+                <a href="#">开源项目</a>
+                <a href="#">视频课程</a>
+            </section>
+        </div>
+        <div class="footer-meta">
+            <span>© 2025 Campus AI Hub. 保留所有权利。</span>
+            <a href="#">隐私政策</a>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="back-to-top" class="back-to-top" aria-label="回到顶部" title="回到顶部">
+        ↑
+    </button>
+
+    <script src="../js/categories.js" defer></script>
+    <script src="../js/back-to-top.js" defer></script>
+</body>
+</html>

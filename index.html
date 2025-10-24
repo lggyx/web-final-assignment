@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus AI Hub | 大学生AI通用技术分享</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="navbar">
+            <a class="branding" href="index.html">
+                <span class="branding-logo">AI</span>
+                <span class="branding-text">
+                    <span class="branding-name">Campus AI Hub</span>
+                    <span class="branding-tagline">大学生AI通用技术分享</span>
+                </span>
+            </a>
+            <nav class="primary-nav" aria-label="主导航">
+                <a href="index.html" aria-current="page">首页</a>
+                <a href="pages/categories.html">技术分类</a>
+                <a href="pages/article.html">文章详情</a>
+                <a href="pages/about.html">关于我们</a>
+                <a href="pages/contact.html">联系我们</a>
+            </nav>
+            <div class="nav-controls">
+                <div class="action-buttons">
+                    <a class="btn-secondary btn" href="#latest">最新分享</a>
+                    <a class="btn" href="#resources">精选资源</a>
+                </div>
+                <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <span class="hero-eyebrow">AI 技术速递 · 校园精选</span>
+                <h1 id="hero-title" class="hero-title">掌握通用人工智能技能，从这里启航</h1>
+                <p class="hero-description">
+                    聚焦大学生场景的 AI 学习社区，囊括机器学习、计算机视觉、自然语言处理等核心技术，
+                    让你全面了解最新趋势与实战经验，快速搭建自己的 AI 能力体系。
+                </p>
+                <div class="hero-actions">
+                    <a class="btn" href="pages/categories.html">浏览所有分类</a>
+                    <a class="btn-secondary btn" href="pages/article.html">阅读精选文章</a>
+                </div>
+            </div>
+            <div class="hero-metrics" aria-label="社区数据">
+                <article class="metric-card">
+                    <span class="metric-value" data-metric="articles">72+</span>
+                    <span class="metric-label">精选文章</span>
+                </article>
+                <article class="metric-card">
+                    <span class="metric-value" data-metric="members">3.5k+</span>
+                    <span class="metric-label">校园学习者</span>
+                </article>
+                <article class="metric-card">
+                    <span class="metric-value" data-metric="events">18+</span>
+                    <span class="metric-label">主题工作坊</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="latest" aria-labelledby="latest-title">
+            <header class="section-heading">
+                <div>
+                    <h2 id="latest-title" class="section-title">最新分享</h2>
+                    <p class="section-subtitle">每周更新校园 AI 社群的最新学习成果，紧跟行业前沿。</p>
+                </div>
+                <a class="btn-secondary btn" href="pages/categories.html">查看全部分类</a>
+            </header>
+            <div class="card-grid" id="latest-articles" aria-live="polite" role="list"></div>
+        </section>
+
+        <section id="resources" class="featured-resources" aria-labelledby="resources-title">
+            <header class="section-heading">
+                <div>
+                    <h2 id="resources-title" class="section-title">精选资源合集</h2>
+                    <p class="section-subtitle">精选课程、工具及开源项目，助你构建系统化 AI 学习路径。</p>
+                </div>
+            </header>
+            <div class="resource-list" id="resource-list" aria-live="polite"></div>
+        </section>
+
+        <section id="community" class="community-callout" aria-labelledby="community-title">
+            <div class="community-content">
+                <h2 id="community-title" class="community-title">加入 Campus AI 社区，共建智能未来</h2>
+                <p class="community-description">
+                    参与双周技术分享会、开源小组项目与线下工作坊，与志同道合的校友一起探索人工智能的无限可能。
+                    关注我们获取活动资讯，或报名成为志愿讲者，将你的学习成果分享给更多同伴。
+                </p>
+                <div class="community-actions">
+                    <a class="btn" href="mailto:contact@campusaihub.com">申请成为讲者</a>
+                    <a class="btn-secondary btn" href="https://discord.com" target="_blank" rel="noopener">加入线上社区</a>
+                </div>
+            </div>
+            <div>
+                <div class="article-card">
+                    <div class="article-meta">
+                        <span>即将到来</span>
+                        <span class="category-pill">线下工作坊</span>
+                    </div>
+                    <h3 class="article-title">AI 原型设计冲刺营 — 48 小时打造 MVP</h3>
+                    <p class="article-summary">
+                        通过团队协作为真实校园问题构建 AI 原型，导师全程指导，从创意到 Demo，助你完成第一款 AI 产品。
+                    </p>
+                    <div class="card-footer">
+                        <a href="#">了解详情</a>
+                        <span>2025 年 11 月 6 日</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <section class="footer-branding" aria-label="站点信息">
+                <div class="branding">
+                    <span class="branding-logo">AI</span>
+                    <span class="branding-text">
+                        <span class="branding-name">Campus AI Hub</span>
+                        <span class="branding-tagline">大学生AI通用技术分享</span>
+                    </span>
+                </div>
+                <p class="section-subtitle">
+                    Campus AI Hub 致力于连接高校 AI 学习者，提供高质量的学习内容与交流平台，帮助你构建专业能力。
+                </p>
+                <div class="footer-social" aria-label="社交媒体">
+                    <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.bilibili.com" target="_blank" rel="noopener">B站</a>
+                </div>
+            </section>
+            <section class="footer-links" aria-label="快速链接">
+                <strong>导航</strong>
+                <a href="index.html">首页</a>
+                <a href="pages/categories.html">技术分类</a>
+                <a href="pages/article.html">文章详情</a>
+                <a href="#community">社区活动</a>
+            </section>
+            <section class="footer-links" aria-label="学习资源">
+                <strong>资源</strong>
+                <a href="#">星标文章</a>
+                <a href="#">学习路线图</a>
+                <a href="#">开源项目</a>
+                <a href="#">视频课程</a>
+            </section>
+        </div>
+        <div class="footer-meta">
+            <span>© 2025 Campus AI Hub. 保留所有权利。</span>
+            <a href="#">隐私政策</a>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="back-to-top" class="back-to-top" aria-label="回到顶部" title="回到顶部">
+        ↑
+    </button>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/back-to-top.js" defer></script>
+</body>
+</html>
